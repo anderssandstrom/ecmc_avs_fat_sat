@@ -49,7 +49,7 @@ epicsEnvSet("ECMC_EC_SLAVE_NUM",              "6")
 epicsEnvSet("ECMC_EC_SLAVE_NUM_DRIVE",        "$(ECMC_EC_SLAVE_NUM)")
 
 # Several current settings are available for this motor (2A..14A). Motor max current is 10A RMS
-# NOTE: The 12A config file results in 10A RMS current (measured with current clamps and scope)
+# NOTE: Setting 12A results in approx 10A RMS current (measured with current clamps and scope)
 epicsEnvSet("ECMC_EC_DRIVE_CURRENT",          "6")     # Set current in Amps here (only integers)
 ${SCRIPTEXEC} ${ecmccfg_DIR}configureSlave.cmd, "SLAVE_ID=$(ECMC_EC_SLAVE_NUM), HW_DESC=iPOS8020BX, CONFIG=-Motor-Phytron-VSH-100-200-10-Parallel-${ECMC_EC_DRIVE_CURRENT}A"
 
