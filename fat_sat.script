@@ -30,7 +30,7 @@ epicsEnvSet("ECMC_EC_SLAVE_NUM",              "0")
 ${SCRIPTEXEC} ${ecmccfg_DIR}addSlave.cmd, "SLAVE_ID=$(ECMC_EC_SLAVE_NUM), HW_DESC=EK1100"
 
 epicsEnvSet("ECMC_EC_SLAVE_NUM",              "1")
-${SCRIPTEXEC} ${ecmccfg_DIR}addSlave.cmd, "SLAVE_ID=$(ECMC_EC_SLAVE_NUM), HW_DESC=EL1088"
+${SCRIPTEXEC} ${ecmccfg_DIR}addSlave.cmd, "SLAVE_ID=$(ECMC_EC_SLAVE_NUM), HW_DESC=EL1004"
 
 epicsEnvSet("ECMC_EC_SLAVE_NUM",              "2")
 epicsEnvSet("ECMC_EC_SLAVE_NUM_DIG_OUT",        "$(ECMC_EC_SLAVE_NUM)")
