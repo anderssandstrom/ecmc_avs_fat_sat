@@ -8,7 +8,7 @@ epicsEnvSet("IOC" ,"$(IOC="IOC_TEST")")
 epicsEnvSet("ECMCCFG_INIT" ,"")  #Only run startup once (auto at PSI, need call at ESS), variable set to "#" in startup.cmd
 epicsEnvSet("SCRIPTEXEC" ,"$(SCRIPTEXEC="iocshLoad")")
 
-require ecmccfg develop
+require ecmccfg master
 
 #- Choose motor record driver implementation
 #-   ECMC_MR_MODULE="ecmcMotorRecord"  => ECMC native built in motor record support (Default)
@@ -50,7 +50,7 @@ epicsEnvSet("ECMC_EC_SLAVE_NUM_DRIVE",        "$(ECMC_EC_SLAVE_NUM)")
 
 # Several current settings are available for this motor (2A..14A). Motor max current is 10A RMS
 # NOTE: Setting 12A results in approx 10A RMS current (measured with current clamps and scope)
-epicsEnvSet("ECMC_EC_DRIVE_CURRENT",          "6")     # Set current in Amps here (only integers)
+epicsEnvSet("ECMC_EC_DRIVE_CURRENT",          "10")     # Set current in Amps here (only integers)
 ${SCRIPTEXEC} ${ecmccfg_DIR}configureSlave.cmd, "SLAVE_ID=$(ECMC_EC_SLAVE_NUM), HW_DESC=iPOS8020BX, CONFIG=-Motor-Phytron-VSH-100-200-10-Parallel-${ECMC_EC_DRIVE_CURRENT}A"
 
 #Apply hardware configuration
