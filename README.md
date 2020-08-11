@@ -1,10 +1,12 @@
 # ecmc_avs_fat_sat:
 This repo is dedicated to the SAT/FAT commisoning/verification of components of the Target Drive Unit (TDU).
 Components that can be tested:
-* Stepper Motors (X,Y,Z)
-* Resolvers (X,Y,Z)
-* Switches (X,Y,Z)
-* Master AMO encoder (Rotation)
+* Stepper Motors (X,Y,Z) [Datasheet](doc/stepper/phytron_datasheet.pdf)
+* Resolvers (X,Y,Z) [Datasheet](doc/stepper/phytron_datasheet.pdf)
+* Switches (X,Y,Z) 
+* Master AMO encoder (Rotation) [Datasheet](doc/amo_encoder/amosinEncoder.pdf)
+
+![Hardware](doc/crate/overview.jpg)
 
 ## Startup of sat_fat_box:
 1. Open Rittal box/crate
@@ -13,6 +15,7 @@ Components that can be tested:
 4. Connect power cord to 3-phase power
 5. Switch breaker in lower left corner
 6. The controller should now be starting up.
+
 
 ## Commisioning of one stepper axis:
 Each stepper axis needs to be tested separately.
