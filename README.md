@@ -42,36 +42,43 @@ The Resolver should be connected to the EL7201 terminal.
 [Datasheet: El7201, resolver input terminal](doc/crate/datasheets/EL7201.pdf)
 
 
-## EPICS ioc
+## ecmc EPICS ioc
+The EtherCAT hardware in the crate is controlled by an [EPICS](https://epics.anl.gov) module called [ecmc](https://github.com/epics-modules/ecmc) and configured through a epics module called [ecmccfg](https://github.com/paulscherrerinstitute/ecmccfg). All needed softwares have already been installed on the controller. 
 
 ### Prepare shell
 1. Start a new terminal window
-2. Go to the ecmc_avs_fat_sat repo:
+2. Go to the ecmc_avs_fat_sat repo top dir:
 ```
-cd Need to add path here
+cd Need to add path here TODO
 ```
 3. Set paths to EPICS binaries:
 ```
-. /epics/base-7.0.3.1/require/3.1.2/bin/setE3Env.bash 
+. /epics/base-7.0.3.1/require/3.1.2/bin/setE3Env.bash TODO
 
 ```
 
 ### Start ioc for stepper axis:
-
+An EPICS ioc needs to be started in order to control the hardware. The "fat_sat.script" file contains configurations of hardware for running a stepper axis with a pythron motor.
 ```
 iocsh.bash fat_sat.script
 ```
-To exit the iocsh type "exit" or ctrl-C keys
+To exit the iocsh (if needed) type "exit" or ctrl-C keys 
 ```
 exit
 ```
 
 ### Start ioc for AMO encoder verification
 
+```
+iocsh.bash fat_sat_amoTODO.script
+```
 
 ## PYQT GUI
+All data is accessiblie in the iocsh but sometimes it's simpler with a graphical GUI. The graphical GUI is generic and can be used to control motors and to read/write data. 
 
 ### Set conda environment
+A conda environment needs to be activated in order to use the correct python module versions
 
-
+```
+source activate TODO
 
