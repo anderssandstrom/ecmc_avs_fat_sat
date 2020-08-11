@@ -13,9 +13,8 @@ Components that can be tested:
 2. Connect white HDMI cable to a HDMI screen
 3. Connect keyboard and mouse to white usb cables
 4. Connect power cord to 3-phase power
-5. Switch breaker in lower left corner
-6. The controller should now be starting up.
-
+5. Switch breaker in lower left corner to ON
+6. The controller should now be starting up...
 
 ## Commisioning of one stepper axis:
 Each stepper axis needs to be tested separately.
@@ -101,5 +100,7 @@ python TODO
 
 ## Commisioning of AMO encoder
 
-###
+### Hardware
+1. Connect the circluar multipole connecter to the AMO encoder box
+
 
