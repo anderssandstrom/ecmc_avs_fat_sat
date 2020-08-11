@@ -80,8 +80,22 @@ source activate TODO
 ```
 cd TODO
 ```
-### Start GUI for stepper axis:
+### Start main GUI:
 
 ```
 python TODO
+
+```
+
+### Start GUI for stepper axis:
+
+```
+ TODO
+```
+
+### Start GUI for resolver:
+
+```
+ TODO
+```
 
