@@ -76,9 +76,15 @@ iocsh.bash fat_sat_amoTODO.script
 ## PYQT GUI
 All data is accessiblie in the iocsh but sometimes it's simpler with a graphical GUI. The graphical GUI is generic and can be used to control motors and to read/write data. 
 
-### Set conda environment
-A conda environment needs to be activated in order to use the correct python module versions
-
+### Prepare shell
+1. Start a new shell
+2. Activate conda environment in order to use the correct python module versions
 ```
 source activate TODO
+```
+3. Go to gui repo
+```
+cd TODO
+```
+
 
