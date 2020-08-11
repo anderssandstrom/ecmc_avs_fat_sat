@@ -19,18 +19,18 @@ Each stepper axis needs to be tested separately.
 
 ### Motor
 1. Connect motor gnd to connector J2 of Technosoft drive.
-2. Connect motor phases to conenctor J2 of Technosoft drive
+2. Connect motor phases to conenctor J2 of Technosoft drive.
 
 [Datasheet: iPOS8020, stepper drive](doc/crate/datasheets/iPOS8020_P029.026.E221.DSH_.10G.pdf)
 
 ### Limit switches:
 Limits are feed from 24V digital output (EL2819) to 24V digital input (EL1004). There are two jumpers installed in the crate that should be replaced with actual sensors.
-1. Connect low limit to input 1 of EL2004 (replace jumper with switch)
-2. Connect high limit to input 2 of EL2004 (replace jumper with switch)
+1. Connect low limit to input 1 of EL2004 (replace jumper with switch).
+2. Connect high limit to input 2 of EL2004 (replace jumper with switch).
 
 [Datasheet: EL2819, 24V output terminal](doc/crate/datasheets/EL2819.pdf)
 
-[Datasheet: EL2004, 24V input terminal](doc/crate/datasheets/EL2004.pdf)
+[Datasheet: EL1004, 24V input terminal](doc/crate/datasheets/EL1004.pdf)
 
 
 ### Resolver:
