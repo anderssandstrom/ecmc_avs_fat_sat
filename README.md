@@ -6,7 +6,7 @@ Components that can be tested:
 * Switches (X,Y,Z) 
 * Master AMO encoder (Rotation) [Datasheet](doc/amo_encoder/amosinEncoder.pdf)
 
-![Hardware](doc/crate/overview.jpg)
+[Hardware](doc/crate/overview.jpg)
 
 ## Startup of sat_fat_box:
 1. Open Rittal box/crate
