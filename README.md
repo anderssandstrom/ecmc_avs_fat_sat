@@ -41,3 +41,37 @@ The Resolver should be connected to the EL7201 terminal.
 
 [Datasheet: El7201, resolver input terminal](doc/crate/datasheets/EL7201.pdf)
 
+
+## EPICS ioc
+
+### Prepare shell
+1. Start a new terminal window
+2. Go to the ecmc_avs_fat_sat repo:
+```
+cd Need to add path here
+```
+3. Set paths to EPICS binaries:
+```
+. /epics/base-7.0.3.1/require/3.1.2/bin/setE3Env.bash 
+
+```
+
+### Start ioc for stepper axis:
+
+```
+iocsh.bash fat_sat.script
+```
+To exit the iocsh type "exit" or ctrl-C keys
+```
+exit
+```
+
+### Start ioc for AMO encoder verification
+
+
+## PYQT GUI
+
+### Set conda environment
+
+
+
