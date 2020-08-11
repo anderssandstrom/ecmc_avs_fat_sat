@@ -1,5 +1,5 @@
 # ecmc_avs_fat_sat:
-This repo is dedicated to the SAT/FAT commisoning/verification of componentes of the Target Drive Unit (TDU).
+This repo is dedicated to the SAT/FAT commisoning/verification of components of the Target Drive Unit (TDU).
 Components that can be tested:
 * Stepper Motors (X,Y,Z)
 * Resolvers (X,Y,Z)
@@ -14,17 +14,20 @@ Components that can be tested:
 5. Switch breaker in lower left corner
 6. The controller should now be starting up.
 
-## Commisioning of one axis:
-One Stepper
-Motor:
-1. Connect motor gnd to Technosoft drive
-2. Connect motor phases direct to Technosoft drive
+## Commisioning of one stepper axis:
+Each stepper axis needs to be tested separately.
 
-## Limits:
+### Motor
+1. Connect motor gnd to connector J2 of Technosoft drive.
+2. Connect motor phases to conenctor J2 of Technosoft drive
+
+[Technosoft iPOS8020 datasheet](doc/crate/datasheets/iPOS8020_P029.026.E221.DSH_.10G.pdf)
+
+### Limits:
 Limits are feed from 24V digital output (EL2819) to 24V digital input (EL1004). There are two jumpers installed in the crate that should be replaced with actual sensors.
 1. Connect low limit to input 1 of EL2004 (replace jumper with switch)
 2. Connect high limit to input 2 of EL2004 (replace jumper with switch)
 
-## Resolver:
- The Resolver shoud be connected to the EL7201 terminal.
+### Resolver:
+The Resolver shoud be connected to the EL7201 terminal.
 
