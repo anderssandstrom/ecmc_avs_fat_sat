@@ -67,12 +67,6 @@ To exit the iocsh (if needed) type "exit" or ctrl-C keys
 exit
 ```
 
-### Start ioc for AMO encoder verification
-
-```
-iocsh.bash fat_sat_amoTODO.script
-```
-
 ## PYQT GUI
 All data is accessiblie in the iocsh but sometimes it's simpler with a graphical GUI. The graphical GUI is generic and can be used to control motors and to read/write data. 
 
@@ -82,9 +76,12 @@ All data is accessiblie in the iocsh but sometimes it's simpler with a graphical
 ```
 source activate TODO
 ```
-3. Go to gui repo
+3. Go to GUI repo:
 ```
 cd TODO
 ```
+### Start GUI for stepper axis:
 
+```
+python TODO
 
