@@ -45,22 +45,28 @@ The Resolver should be connected to the EL7201 terminal.
 The EtherCAT hardware in the crate is controlled by an [EPICS](https://epics.anl.gov) module called [ecmc](https://github.com/epics-modules/ecmc) and configured through a epics module called [ecmccfg](https://github.com/paulscherrerinstitute/ecmccfg). All needed softwares have already been installed on the controller. 
 
 #### Prepare shell
-1. Start a new terminal window
+1. Start a new terminal window (press black button ">_" in upper left corner of screen):
+
+![New terminal](doc/gui/newterminal.png)
+
 2. Go to the ecmc_avs_fat_sat repo top dir:
 ```
-cd Need to add path here TODO
+cd sources/ecmc_avs_fat_sat
 ```
 3. Set paths to EPICS binaries:
 ```
-. /epics/base-7.0.3.1/require/3.1.2/bin/setE3Env.bash TODO
+. /epics/base-7.0.3.1/require/3.1.2/bin/setE3Env.bash
 
 ```
 
+![Set e3 environment](doc/gui/e3env.png)
+
 #### Start ioc for stepper axis:
-An EPICS ioc needs to be started in order to control the hardware. The "fat_sat.script" file contains configurations of hardware for running a stepper axis with a pythron motor.
+An EPICS ioc (input/output controller) needs to be started in order to control the hardware. The "fat_sat.script" file contains configurations of hardware for running a stepper axis with a pythron motor.
 ```
 iocsh.bash fat_sat.script
 ```
+
 To exit the iocsh (if needed) type "exit" or ctrl-C keys 
 ```
 exit
@@ -69,28 +75,33 @@ exit
 ### PYQT GUI
 All data is accessiblie in the iocsh but sometimes it's simpler with a graphical GUI. The graphical GUI is generic and can be used to control motors and to read/write data. 
 
-#### Prepare shell
-1. Start a new shell
+#### Prepare shell and start GUI
+1. Start a new terminal/shell by pressing the blach button ">_" in upper left corner of screen 
 2. Activate conda environment in order to use the correct python module versions
 ```
-source activate TODO
+source activate ecmccomgui_py35
 ```
+
 3. Go to GUI repo:
 ```
-cd TODO
+cd
+cd source/ecmccomgui
 ```
-#### Start main GUI:
+4. Start GUI:
 
 ```
-python TODO
-
+python ecmcGuiMain.py
 ```
+5. Choose process variable (PV = IOC_TEST:Axis1):
 
-#### Start GUI for stepper axis:
+ioc prefix: "IOC_TEST:"
 
-```
- TODO
-```
+pv name: "Axis1"
+
+
+6. Start GUI for stepper axis:
+
+press the "open gui" button
 
 #### Start GUI for resolver:
 
