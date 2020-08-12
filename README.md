@@ -48,7 +48,7 @@ The EtherCAT hardware in the crate is controlled by an [EPICS](https://epics.anl
 1. Start a new terminal window
 2. Go to the ecmc_avs_fat_sat repo top dir:
 ```
-cd Need to add path here TODO
+cd sources/ecmc_avs_fat_sat
 ```
 3. Set paths to EPICS binaries:
 ```
@@ -57,7 +57,7 @@ cd Need to add path here TODO
 ```
 
 #### Start ioc for stepper axis:
-An EPICS ioc needs to be started in order to control the hardware. The "fat_sat.script" file contains configurations of hardware for running a stepper axis with a pythron motor.
+An EPICS ioc (input/output controller) needs to be started in order to control the hardware. The "fat_sat.script" file contains configurations of hardware for running a stepper axis with a pythron motor.
 ```
 iocsh.bash fat_sat.script
 ```
