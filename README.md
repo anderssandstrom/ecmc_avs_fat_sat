@@ -55,7 +55,7 @@ cd sources/ecmc_avs_fat_sat
 ```
 3. Set paths to EPICS binaries:
 ```
-. /epics/base-7.0.3.1/require/3.1.2/bin/setE3Env.bash TODO
+. /epics/base-7.0.3.1/require/3.1.2/bin/setE3Env.bash
 
 ```
 
