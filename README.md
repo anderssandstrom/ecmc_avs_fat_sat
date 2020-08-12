@@ -69,28 +69,32 @@ exit
 ### PYQT GUI
 All data is accessiblie in the iocsh but sometimes it's simpler with a graphical GUI. The graphical GUI is generic and can be used to control motors and to read/write data. 
 
-#### Prepare shell
-1. Start a new shell
+#### Prepare shell and start GUI
+1. Start a new terminal/shell
 2. Activate conda environment in order to use the correct python module versions
 ```
-source activate TODO
+source activate ecmccomgui_py35
 ```
 3. Go to GUI repo:
 ```
-cd TODO
+cd
+cd source/ecmccomgui
 ```
-#### Start main GUI:
+4. Start GUI:
 
 ```
-python TODO
-
+python ecmcGuiMain.py
 ```
+5. Choose process variable (PV = IOC_TEST:Axis1):
 
-#### Start GUI for stepper axis:
+ioc prefix: "IOC_TEST:"
 
-```
- TODO
-```
+pv name: "Axis1"
+
+
+6. Start GUI for stepper axis:
+
+press the "open gui" button
 
 #### Start GUI for resolver:
 
