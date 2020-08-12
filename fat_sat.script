@@ -42,6 +42,9 @@ ${SCRIPTEXEC} ${ecmccfg_DIR}addSlave.cmd, "SLAVE_ID=$(ECMC_EC_SLAVE_NUM), HW_DES
 epicsEnvSet("ECMC_EC_SLAVE_NUM",              "4")
 ${SCRIPTEXEC} ${ecmccfg_DIR}addSlave.cmd, "SLAVE_ID=$(ECMC_EC_SLAVE_NUM), HW_DESC=EL5021"
 
+# Enable reset on c-latch (index track)
+ecmcConfigOrDie "Cfg.EcAddSdo($(ECMC_EC_SLAVE_NUM),0x8000,0x1,1,1)"
+
 epicsEnvSet("ECMC_EC_SLAVE_NUM",              "5")
 ${SCRIPTEXEC} ${ecmccfg_DIR}addSlave.cmd, "SLAVE_ID=$(ECMC_EC_SLAVE_NUM), HW_DESC=EL7201"
 
