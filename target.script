@@ -60,6 +60,13 @@ ${SCRIPTEXEC} ${ecmccfg_DIR}configureSlave.cmd, "SLAVE_ID=$(ECMC_EC_SLAVE_NUM), 
 ecmcConfigOrDie "Cfg.EcApplyConfig(1)"
 
 ##############################################################################
+############ Set outputs to feed switches
+ecmcConfigOrDie "Cfg.WriteEcEntryIDString(${ECMC_EC_SLAVE_NUM_DIG_OUT},BO_1,1)"
+ecmcConfigOrDie "Cfg.WriteEcEntryIDString(${ECMC_EC_SLAVE_NUM_DIG_OUT},BO_2,1)"
+ecmcConfigOrDie "Cfg.WriteEcEntryIDString(${ECMC_EC_SLAVE_NUM_DIG_OUT},BO_3,1)"
+ecmcConfigOrDie "Cfg.WriteEcEntryIDString(${ECMC_EC_SLAVE_NUM_DIG_OUT},BO_4,1)"
+
+##############################################################################
 ## AXIS 1
 #
 epicsEnvSet("DEV",      "$(IOC)")
@@ -79,10 +86,3 @@ ecmcConfigOrDie "Cfg.SetDiagAxisEnable(0)"
 $(SCRIPTEXEC) ($(ecmccfg_DIR)setAppMode.cmd)
 
 iocInit
-
-##############################################################################
-############ Set outputs to feed switches
-dbpf ${IOC}:ec0-s${ECMC_EC_SLAVE_NUM_DIG_OUT}-EL2819-BO1 1
-dbpf ${IOC}:ec0-s${ECMC_EC_SLAVE_NUM_DIG_OUT}-EL2819-BO2 1
-dbpf ${IOC}:ec0-s${ECMC_EC_SLAVE_NUM_DIG_OUT}-EL2819-BO3 1
-dbpf ${IOC}:ec0-s${ECMC_EC_SLAVE_NUM_DIG_OUT}-EL2819-BO4 1
