@@ -1,0 +1,88 @@
+##############################################################################
+## Example config for fat_sat crate for AVS (Target)
+## Test steppers, resolvers, main encoder (sin/cos)
+
+##############################################################################
+## Initiation:
+epicsEnvSet("IOC" ,"$(IOC="IOC_TEST")")
+epicsEnvSet("ECMCCFG_INIT" ,"")  #Only run startup once (auto at PSI, need call at ESS), variable set to "#" in startup.cmd
+epicsEnvSet("SCRIPTEXEC" ,"$(SCRIPTEXEC="iocshLoad")")
+
+require ecmccfg master
+
+#- Choose motor record driver implementation
+#-   ECMC_MR_MODULE="ecmcMotorRecord"  => ECMC native built in motor record support (Default)
+#-   ECMC_MR_MODULE="EthercatMC"       => Motor record support from EthercatMC module (need to be loaded)
+#- Uncomment the line below to use EthercatMC (and add optional EthercatMC_VER to startup.cmd call):
+#epicsEnvSet(ECMC_MR_MODULE,"EthercatMC")
+
+
+# Epics Motor record driver that will be used:
+epicsEnvShow(ECMC_MR_MODULE)
+
+# run module startup.cmd (only needed at ESS  PSI auto call at require)
+$(ECMCCFG_INIT)$(SCRIPTEXEC) ${ecmccfg_DIR}startup.cmd, "IOC=$(IOC),ECMC_VER=master,stream_VER=2.8.10, EC_RATE=500"
+
+##############################################################################
+## Configure hardware:
+
+epicsEnvSet("ECMC_EC_SLAVE_NUM",              "0")
+${SCRIPTEXEC} ${ecmccfg_DIR}addSlave.cmd, "SLAVE_ID=$(ECMC_EC_SLAVE_NUM), HW_DESC=EK1100"
+
+epicsEnvSet("ECMC_EC_SLAVE_NUM",              "1")
+${SCRIPTEXEC} ${ecmccfg_DIR}addSlave.cmd, "SLAVE_ID=$(ECMC_EC_SLAVE_NUM), HW_DESC=EL1004"
+
+epicsEnvSet("ECMC_EC_SLAVE_NUM",              "2")
+epicsEnvSet("ECMC_EC_SLAVE_NUM_DIG_OUT",        "$(ECMC_EC_SLAVE_NUM)")
+${SCRIPTEXEC} ${ecmccfg_DIR}addSlave.cmd, "SLAVE_ID=$(ECMC_EC_SLAVE_NUM), HW_DESC=EL2819"
+
+epicsEnvSet("ECMC_EC_SLAVE_NUM",              "3")
+${SCRIPTEXEC} ${ecmccfg_DIR}addSlave.cmd, "SLAVE_ID=$(ECMC_EC_SLAVE_NUM), HW_DESC=EL5002"
+
+epicsEnvSet("ECMC_EC_SLAVE_NUM",              "4")
+${SCRIPTEXEC} ${ecmccfg_DIR}addSlave.cmd, "SLAVE_ID=$(ECMC_EC_SLAVE_NUM), HW_DESC=EL5021"
+
+# Enable reset on c-latch (index track)
+ecmcConfigOrDie "Cfg.EcAddSdo($(ECMC_EC_SLAVE_NUM),0x8000,0x1,1,1)"
+
+epicsEnvSet("ECMC_EC_SLAVE_NUM",              "5")
+${SCRIPTEXEC} ${ecmccfg_DIR}addSlave.cmd, "SLAVE_ID=$(ECMC_EC_SLAVE_NUM), HW_DESC=EL7201"
+
+epicsEnvSet("ECMC_EC_SLAVE_NUM",              "6")
+epicsEnvSet("ECMC_EC_SLAVE_NUM_DRIVE",        "$(ECMC_EC_SLAVE_NUM)")
+
+# Several current settings are available for this motor (2A..17A). Motor max current is 12A RMS
+# NOTE: Setting 12A results in approx 10A RMS current (measured with current clamps and scope)
+epicsEnvSet("ECMC_EC_DRIVE_CURRENT",          "5")     # Set current in Amps here (only integers)
+${SCRIPTEXEC} ${ecmccfg_DIR}configureSlave.cmd, "SLAVE_ID=$(ECMC_EC_SLAVE_NUM), HW_DESC=iPOS8020BX, CONFIG=-Motor-Stoegra-SM107-3-18M12-Parallel-${ECMC_EC_DRIVE_CURRENT}A"
+
+#Apply hardware configuration
+ecmcConfigOrDie "Cfg.EcApplyConfig(1)"
+
+##############################################################################
+## AXIS 1
+#
+epicsEnvSet("DEV",      "$(IOC)")
+$(SCRIPTEXEC) ($(ecmccfg_DIR)configureAxis.cmd, CONFIG=./cfg/ipos8020_1.ax)
+
+##############################################################################
+############# Configure diagnostics:
+
+ecmcConfigOrDie "Cfg.EcSetDiagnostics(1)"
+ecmcConfigOrDie "Cfg.EcEnablePrintouts(0)"
+ecmcConfigOrDie "Cfg.EcSetDomainFailedCyclesLimit(100)"
+ecmcConfigOrDie "Cfg.SetDiagAxisIndex(1)"
+ecmcConfigOrDie "Cfg.SetDiagAxisFreq(2)"
+ecmcConfigOrDie "Cfg.SetDiagAxisEnable(0)"
+
+# go active
+$(SCRIPTEXEC) ($(ecmccfg_DIR)setAppMode.cmd)
+
+iocInit
+
+##############################################################################
+############ Set outputs to feed switches
+dbpf ${IOC}:ec0-s${ECMC_EC_SLAVE_NUM_DIG_OUT}-EL2819-BO1 1
+dbpf ${IOC}:ec0-s${ECMC_EC_SLAVE_NUM_DIG_OUT}-EL2819-BO2 1
+dbpf ${IOC}:ec0-s${ECMC_EC_SLAVE_NUM_DIG_OUT}-EL2819-BO3 1
+dbpf ${IOC}:ec0-s${ECMC_EC_SLAVE_NUM_DIG_OUT}-EL2819-BO4 1
