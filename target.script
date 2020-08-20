@@ -86,3 +86,6 @@ ecmcConfigOrDie "Cfg.SetDiagAxisEnable(0)"
 $(SCRIPTEXEC) ($(ecmccfg_DIR)setAppMode.cmd)
 
 iocInit
+
+# Store Records to file
+dbl > pvs.log
