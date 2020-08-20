@@ -1,0 +1,125 @@
+#cd
+#tree -L 2 sources
+#~/sources/
+├── e3-7.0.3.1
+│   ├── caget_pvs.bash
+│   ├── cmds
+│   ├── CONFIG_BASE.local
+│   ├── configure
+│   ├── docs
+│   ├── e3-ads
+│   ├── e3-asyn
+│   ├── e3-autosave
+│   ├── e3-base
+│   ├── e3.bash
+│   ├── e3-BeckhoffADS
+│   ├── e3_building_config.bash
+│   ├── e3-busy
+│   ├── e3-calc
+│   ├── e3-caPutLog
+│   ├── e3-delaygen
+│   ├── e3-ecmc
+│   ├── e3-ecmccfg
+│   ├── e3-ess
+│   ├── e3-EthercatMC
+│   ├── e3-exprtk
+│   ├── e3-iocStats
+│   ├── e3-ip
+│   ├── e3-ipmiComm
+│   ├── e3-MCoreUtils
+│   ├── e3-modbus
+│   ├── e3-motor
+│   ├── e3-pcre
+│   ├── e3-recsync
+│   ├── e3-require
+│   ├── e3-s7plc
+│   ├── e3-seq
+│   ├── e3-sscan
+│   ├── e3-std
+│   ├── e3-StreamDevice
+│   ├── maintain_e3.bash
+│   ├── README_developing.md
+│   ├── README_maintain.md
+│   ├── README.md
+│   ├── release_defs
+│   ├── RELEASE_DEV.local
+│   ├── release_info
+│   ├── RELEASE.local
+│   ├── release_logs
+│   ├── REQUIRE_CONFIG_MODULE.local
+│   └── tools
+├── e3-ecmccfg
+│   ├── cmds
+│   ├── configure
+│   ├── docs
+│   ├── ecmccfg
+│   ├── ecmccfg-dev
+│   ├── ecmccfg.Makefile
+│   ├── iocsh
+│   ├── Makefile
+│   ├── opi
+│   ├── patch
+│   ├── README.md
+│   └── template
+├── ecmc_avs_fat_sat
+│   ├── 0:
+│   ├── bifrost.script
+│   ├── cfg
+│   ├── doc
+│   ├── obsolete
+│   ├── plc
+│   ├── pvs.log
+│   ├── README.md
+│   ├── scripts
+│   └── target.script
+├── ecmccomgui
+│   ├── ecmcArrayStat.py
+│   ├── ecmcGuiMain.py
+│   ├── ecmcMainWndDesigner.py
+│   ├── ecmcMainWndDesigner.ui
+│   ├── ecmcOneMotorGUI.py
+│   ├── ecmcRTCanvas.py
+│   ├── ecmcTrendPv.py
+│   ├── ecmcTrend.py
+│   ├── __pycache__
+│   └── virtEnvNotes.txt
+├── etherlabmaster
+│   ├── CODE_OF_CONDUCT.md
+│   ├── configure
+│   ├── CrossCompile.md
+│   ├── dkms
+│   ├── docs
+│   ├── ethercatmaster.local
+│   ├── etherlabmaster-code
+│   ├── etherlabmaster.Makefile
+│   ├── LICENSE
+│   ├── Makefile
+│   ├── patch
+│   ├── README.md
+│   ├── scripts
+│   └── TROUBLESHOOT.md
+└── nicetohave
+    ├── bios.txt
+    ├── centosinstall
+    ├── centosinstall.txt
+    ├── cyclicCore.bash
+    ├── debianCX.txt
+    ├── e3.txt
+    ├── ecmcTroubleShoot.txt
+    ├── EPICS_BasicIOCTraining_HandOut.pdf
+    ├── etherlabCmds.txt
+    ├── installRoot.txt
+    ├── linuxcmds.txt
+    ├── logRTcamon
+    ├── niceStuff
+    ├── notesOnPipEnv.txt
+    ├── phoebusEx.sh
+    ├── pyDataManip
+    ├── raspi
+    ├── rtNotes
+    ├── rtThingToCheck.bash
+    ├── setupController.txt
+    ├── threadInfoByCmd.bash
+    └── tools
+
+65 directories, 55 files
