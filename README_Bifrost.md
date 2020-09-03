@@ -106,7 +106,7 @@ The following GUI for the EPICS motor record should appear:
 
 The GUI is devided into two panels:
 
-* The left panel is for control and EPICS motor record specific information.
+* The left panel is for control and EPICS motor record specific status and control.
 
 * The right panel shows additional status of the ecmc motion axis
 
@@ -153,7 +153,25 @@ Item | Field | Description | R/W
 10 | velAct | Actual velocity | R
 11 | velFFRaw | Raw velocity feedforward (in drive units)| R
 12 | velRaw | Raw velocity setpoint (in drive units) | R
-
+13 | cycleCounter | RT thread cycles | R
+14 | error | Error code | R
+15 | Command | Current motion mode (positioning, constant velo, homing,..)  | R
+16 | Command data | Additional motion mode parameter. For homing, it's the homing procedure type | R
+17 | Seq state | Shows state of current sequence (only used for homig sequences)| R
+18 | ilock | Shows any interlock that prevents motion| R
+19 | ilocklast | Shows last interlock that prevented motion| R
+20 | trajsource | Shows if axis position setpoint is from local trajectory generator or PLC | R
+21 | encsource | Shows if axis actual position  is from local trajectory generator or PLC | R
+22 | enable | Enable amplifier command | R
+23 | enabled | Amplifier enabled status | R
+24 | execute | Motion move execute (rising edge triggers new motion and falling edge stops motion) | R
+25 | busy | Axis busy status | R
+26 | atTarget | Axis is within a certain tolerance from target position | R
+27 | homed | Axis is homed (referenced or absolute encoder) | R
+28 | lowLim | Low limit switch status (backward, high allows motion low interlocks motion) | R
+29 | highLim |High  limit switch status (forward, high allows motion low interlocks motion) | R
+30 | homeSensor |Status of home/reference sensor (if any) | R
+31 | Timestamp | EPICS timestamp of data | R
 
 
 #### Start GUI for Encoder:
