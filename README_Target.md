@@ -59,3 +59,9 @@ To exit the iocsh (if needed) type "exit" or ctrl-C keys
 ```
 exit
 ```
+## PYQT GUI
+Some instruction on how to start a GUI can be found here:
+ [GUI](README_gui.md)
+
+
+
