@@ -100,9 +100,17 @@ pv name: "Axis1"
 
 press the "open gui" button
 
-The following GUI should appear:
+The following GUI for the EPICS motor record should appear:
 
 ![Motor GUI](doc/gui/motorGUI_small.png)
+
+The GUI is devided into two panels:
+
+* The left panel is for control and EPICS motor record specific information.
+
+* The right panel shows additional status of the ecmc motion axis
+
+The different fields for the left side of the panel are explained in the below table.
 
 Item | Field | Description | R/W
 --- | --- | --- | ---|
@@ -129,6 +137,22 @@ Item | Field | Description | R/W
 21 | CNEN | Enable/disable amplifier | RW
 22 | RESET | Reset any error | RW
 
+The different fields for the right side of the panel are explained in the below table.
+
+Item | Field | Description | R/W
+--- | --- | --- | ---|
+1 | axId | Index of axis | R
+2 | posSet | Current position setpoint (trajectory) | R
+3 | posAct | Actual position | R
+4 | posErr | Current position error (following error) | R
+5 | posTarg | Target position (where motion should stop) | R
+6 | posErrTarg | Distance untill target position | R
+7 | posRaw | Current raw unscaled actual position | R
+8 | ctrlOut | Output of PID controller including feedforward | R
+9 | velSet | Current velocity setpoint| R
+10 | velAct | Actual velocity | R
+11 | velFFRaw | Raw velocity feedforward (in drive units)| R
+12 | velRaw | Raw velocity setpoint (in drive units) | R
 
 
 
