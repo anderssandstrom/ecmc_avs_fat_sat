@@ -173,10 +173,18 @@ Item | Field | Description | R/W
 30 | homeSensor |Status of home/reference sensor (if any) | R
 31 | Timestamp | EPICS timestamp of data | R
 
+#### Issue a positioning command:
 
-#### Start GUI for Encoder:
+1. Ensure that it is safe for the motor to be powered and move. Always have the E-stop within reach.
+2. Ensure that the VELO field contains a resonable velocity.
+3. Enable the amplifier by pushing the CNEN button. The CNEN button should turn green and the status "enabled" should show "1". can take a few seconds.
+4. Enter a new target position in the "VAL" field. The motor should start rotating twoards the new target position.
 
-```
- TODO
-```
+#### Issue a jog command:
+
+1. Ensure that it is safe for the motor to be powered and move. Always have the E-stop within reach.
+2. Ensure that the JVEL field contains a resonable velocity.
+3. Enable the amplifier by pushing the CNEN button. The CNEN button should turn green and the status "enabled" should show "1". can take a few seconds.
+4. Press the "JOGF" button for forward motion or the "JOGR" button for backward motion.
+5. The motor can be stopped by pressing the "STOP" button.
 
