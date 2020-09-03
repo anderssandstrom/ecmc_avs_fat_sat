@@ -33,4 +33,4 @@ The Target and Bifrost application uses different motors and feedbacks and there
 
 ## PYQT GUI
 Some instruction on how to start a GUI can be found here:
- [Bifrost](README_gui.md)
+ [GUI](README_gui.md)
