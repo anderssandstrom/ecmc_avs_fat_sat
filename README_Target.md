@@ -1,5 +1,5 @@
-# ecmc_avs_fat_sat: Bifrost
-This file describes the work flow for commisoing of the stepper of the Bifrost instrument
+# ecmc_avs_fat_sat: Target
+This file describes the work flow for commisoing of the stepper of the Target instrument
 
 ### Motor
 1. Connect motor gnd to connector J2 of Technosoft drive (important!!).
