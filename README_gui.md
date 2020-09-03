@@ -114,10 +114,28 @@ To, for instance, plot the actula positon:
 1. Check the checkbox on the same line as "actPos"
 2. Press the "Plot" button
 
-A new window will appear:
+A new window will appear with a plot of the selected parameter:
 
-![Plot](doc/gui/plot_small.png)
+![Plot GUI](doc/gui/plot_small.png)
 
+
+The plot window have a few controls:
+Item | Field | Description
+--- | --- | --- |
+1 | Ymax group | Controls to set maximum y-axis value
+2 | Ymax text input | Desired maximum y-axis value
+3 | Ymax set button ">"  | Press to set re-zoom the plot based on Ymax text input
+4 | Zoom auto  | Auto zoom of y axis
+5 | Freeze  | Enable/disable update of plot
+6 | Ymin group | Controls to set minimum y-axis value
+7 | Ymin text input | Desired minimum y-axis value
+8 | Ymin set button ">"  | Press to set re-zoom the plot based on Ymin text input
+9 | Write PV group  | Controls to allow write to the selected process variable (greyed out if not allowd)
+10 | Write PV text input  | Enter value to write to the selected process variable
+11 | Write PV button ">"  | Issue write command to selected PV
+12 | Buffer size | Set buffer size of plot (number of values to show)
+
+In addition to these buttons there are also some functionalites for zooming and storing plots in the top part of the plot window. For additional information on these buttons plese checkout matplotlib.
 
 ## Stop motion:
 The motor can be stopped by pressing the "STOP" button (or in worst case CNEN button (not good for electronics) or E-Stop button).
