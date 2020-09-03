@@ -2,7 +2,7 @@
 
 All data is accessiblie in the iocsh but sometimes it's simpler with a graphical GUI. The graphical GUI is generic and can be used to control motors and to read/write data. 
 
-#### Prepare shell and start GUI
+## Prepare shell and start GUI
 1. Start a new terminal/shell by pressing the blach button ">_" in upper left corner of screen 
 2. Activate conda environment in order to use the correct python module versions
 
@@ -109,7 +109,17 @@ Item | Field | Description | R/W
 30 | homeSensor |Status of home/reference sensor (if any) | R
 31 | Timestamp | EPICS timestamp of data | R
 
-#### Issue a positioning command:
+The checkboxes are used to select a field for plotting (note: only one field can be selected currentlly).
+To, for instance, plot the actula positon:
+1. Check the checkbox on the same line as "actPos"
+2. Press the "Plot" button
+
+
+
+## Stop motion:
+The motor can be stopped by pressing the "STOP" button (or in worst case CNEN button (not good for electronics) or E-Stop button).
+
+## Issue a positioning command:
 
 1. Ensure that it is safe for the motor to be powered and move. Always have the E-stop within reach.
 2. Ensure that there are no error code. If error, try to reset by the "Reset Error"
@@ -118,8 +128,17 @@ Item | Field | Description | R/W
 5. Enter a new target position in the "VAL" field. The motor should start rotating twoards the new target position.
 6. The motor can be stopped by pressing the "STOP" button (or in worst case CNEN button (not good for electronics) or E-Stop button).
 
+## Issue a relative positioning command:
 
-#### Issue a jog command:
+1. Ensure that it is safe for the motor to be powered and move. Always have the E-stop within reach.
+2. Ensure that there are no error code. If error, try to reset by the "Reset Error"
+3. Ensure that the VELO field contains a resonable velocity.
+4. Enable the amplifier by pushing the CNEN button. The CNEN button should turn green and the status "enabled" should show "1". can take a few seconds.
+5. Enter a the desired relative position in the TWEAK distance field.
+6. Press the tweek forward button (">>") to move forward or the tweak backward button ("<<")to move backward the selected distance.
+6. The motor can be stopped by pressing the "STOP" button (or in worst case CNEN button (not good for electronics) or E-Stop button).
+
+## Issue a jog command:
 
 1. Ensure that it is safe for the motor to be powered and move. Always have the E-stop within reach.
 2. Ensure that there are no error code. If error, try to reset by the "Reset Error"
