@@ -110,14 +110,16 @@ Item | Field | Description | R/W
 31 | Timestamp | EPICS timestamp of data | R
 
 The checkboxes are used to select a field for plotting (note: only one field can be selected currentlly).
+
 To, for instance, plot the actula positon:
+
 1. Check the checkbox on the same line as "actPos"
+
 2. Press the "Plot" button
 
 A new window will appear with a plot of the selected parameter:
 
 ![Plot GUI](doc/gui/plot_small.png)
-
 
 The plot window have a few controls:
 Item | Field | Description
