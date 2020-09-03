@@ -112,7 +112,15 @@ Item | Field | Description | R/W
 4 | RBV | Readback value (encoder or stepcounter) with unit specified in EGU | R
 5 | VAL | Position setpoint with unit specified in EGU.  | RW
 6 | VELO | Velocity setpoint for positioning unit EGU/second | RW
-7 | VELO | Velocity setpoint for positioning unit EGU/second | RW
+7 | MSTA | Status word | R
+8 | TWEAK group | Move relative a certain distance. Push left button to move backward and right button forward | RW
+9 | TWEAK distance| Center textbox in tweak group defines the distance to move | RW
+10 | TWEAK "<<" | Initiate relative move backward | RW
+11 | TWEAK ">>" | Initiate relative move forward | RW
+12 | TWEAK "/10" | Divide tweak distance with 10 | RW
+13 | TWEAK "*10" | Multiply tweak distance with 10 | RW
+14 | JOG group | Continious movement backward or forward | RW
+
 
 
 #### Start GUI for Encoder:
