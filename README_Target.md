@@ -52,7 +52,7 @@ cd sources/ecmc_avs_fat_sat
 #### Start ioc for stepper axis:
 An EPICS ioc (input/output controller) needs to be started in order to control the hardware. The "fat_sat.script" file contains configurations of hardware for running a stepper axis with a pythron motor.
 ```
-iocsh.bash fat_sat.script
+iocsh.bash target.script
 ```
 
 To exit the iocsh (if needed) type "exit" or ctrl-C keys 
