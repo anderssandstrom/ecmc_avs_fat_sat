@@ -25,8 +25,15 @@ The encofder should be connected to the EL5002 terminal.
 
 [Datasheet: EL5002, SSI encoder input terminal](doc/crate/datasheets/EL5002.pdf)
 
+
 ### ecmc EPICS ioc
 The EtherCAT hardware in the crate is controlled by an [EPICS](https://epics.anl.gov) module called [ecmc](https://github.com/epics-modules/ecmc) and configured through a epics module called [ecmccfg](https://github.com/paulscherrerinstitute/ecmccfg). All needed softwares have already been installed on the controller. 
+
+Notes on motor configuration:
+The hardware is currently configured to run a stepper motor in open loop in the unit motor degrees (360 correspons to one rev of the motor). Any gears have not yet been configured. If needed the motion can be configured to any unit or scaling needed. Then please supply information on gears and scalings (from motor axis to the desired unit).
+
+Notes on encoder configuration:
+The Posital encoder have not yet been included in the configuration since ESS did not have a encoder of this type. Encoders have been ordered so a configuration file will be available within short. Please contact anders.sandstrom@esss.se for information.
 
 #### Prepare shell
 1. Start a new terminal window (press black button ">_" in upper left corner of screen):

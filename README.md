@@ -1,11 +1,18 @@
 # ecmc_avs_fat_sat:
-This repo is dedicated to the SAT/FAT commisoning/verification of components of the Target Drive Unit (TDU) and Bifrost instrument..
-Components that can be tested:
+This repo is dedicated to the SAT/FAT commisoning/verification of components of the Target Drive Unit (TDU) and Bifrost instrument.
+Components that can be tested for target:
+
 * Stepper Motors (X,Y,Z) [Datasheet](doc/stepper/phytron_datasheet.pdf)
 * Resolvers (X,Y,Z) [Datasheet](doc/stepper/phytron_datasheet.pdf)
 * Switches (X,Y,Z) 
 * Master AMO encoder (Rotation) [Datasheet](doc/amo_encoder/amosinEncoder.pdf)
 
+Components that can be tested for bifrost:
+* Stepper Motor
+* Switches
+* Posital SSI encoder for Bifrost
+ 
+ 
 [Hardware](doc/crate/overview.jpg)
 
 ## Startup of sat_fat_box:
@@ -19,9 +26,9 @@ Components that can be tested:
 ## Connect hardware and start of EPICS IOC:
 The Target and Bifrost application uses different motors and feedbacks and therefore uses different configurations of hardware and IOC.
 
-1. Target [Target](README_Target.md)
+1. [Target](README_Target.md)
  
-2. Bifrost [Target](README_Bifrost.md)
+2. [Bifrost](README_Bifrost.md)
 
 
 ### PYQT GUI
