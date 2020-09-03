@@ -120,6 +120,15 @@ Item | Field | Description | R/W
 12 | TWEAK "/10" | Divide tweak distance with 10 | RW
 13 | TWEAK "*10" | Multiply tweak distance with 10 | RW
 14 | JOG group | Continious movement backward or forward | RW
+15 | JVEL | Jog velocity (EGU/second) | RW
+16 | JOGR | Initiate backward jog | RW
+17 | JOGF | Initiate forward jog | RW
+18 | HOMR | Initiate homing sequence | RW
+19 | HOMF | Initiate homing sequence (same as HOMR) | RW
+20 | STOP | Stop motion | RW
+21 | CNEN | Enable/disable amplifier | RW
+22 | RESET | Reset any error | RW
+
 
 
 
