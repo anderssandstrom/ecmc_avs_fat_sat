@@ -116,7 +116,7 @@ Item | Field | Description | R/W
 3. Ensure that the VELO field contains a resonable velocity.
 4. Enable the amplifier by pushing the CNEN button. The CNEN button should turn green and the status "enabled" should show "1". can take a few seconds.
 5. Enter a new target position in the "VAL" field. The motor should start rotating twoards the new target position.
-6. The motor can be stopped by pressing the "STOP" button (or in worst case CNEN button (not good for electronics) or finaly E-Stop button).
+6. The motor can be stopped by pressing the "STOP" button (or in worst case CNEN button (not good for electronics) or E-Stop button).
 
 
 #### Issue a jog command:
@@ -126,5 +126,5 @@ Item | Field | Description | R/W
 3. Ensure that the JVEL field contains a resonable velocity.
 4. Enable the amplifier by pushing the CNEN button. The CNEN button should turn green and the status "enabled" should show "1". can take a few seconds.
 5. Press the "JOGF" button for forward motion or the "JOGR" button for backward motion.
-6. The motor can be stopped by pressing the "STOP" button (or in worst case CNEN button (not good for electronics) or finaly E-Stop button).
+6. The motor can be stopped by pressing the "STOP" button (or in worst case CNEN button (not good for electronics) or E-Stop button).
 
