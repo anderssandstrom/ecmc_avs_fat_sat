@@ -114,6 +114,9 @@ To, for instance, plot the actula positon:
 1. Check the checkbox on the same line as "actPos"
 2. Press the "Plot" button
 
+A new window will appear:
+
+![Plot](doc/gui/plot_small.png)
 
 
 ## Stop motion:
