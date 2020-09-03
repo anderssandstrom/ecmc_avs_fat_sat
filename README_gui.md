@@ -137,10 +137,12 @@ Item | Field | Description
 
 In addition to these buttons there are also some functionalites for zooming and storing plots in the top part of the plot window. For additional information on these buttons plese checkout matplotlib.
 
-## Stop motion:
+## Start motion commands:
+
+### Stop motion:
 The motor can be stopped by pressing the "STOP" button (or in worst case CNEN button (not good for electronics) or E-Stop button).
 
-## Issue a positioning command:
+### Start a positioning command:
 
 1. Ensure that it is safe for the motor to be powered and move. Always have the E-stop within reach.
 2. Ensure that there are no error code. If error, try to reset by the "Reset Error"
@@ -149,7 +151,7 @@ The motor can be stopped by pressing the "STOP" button (or in worst case CNEN bu
 5. Enter a new target position in the "VAL" field. The motor should start rotating twoards the new target position.
 6. The motor can be stopped by pressing the "STOP" button (or in worst case CNEN button (not good for electronics) or E-Stop button).
 
-## Issue a relative positioning command:
+### Start a relative positioning command:
 
 1. Ensure that it is safe for the motor to be powered and move. Always have the E-stop within reach.
 2. Ensure that there are no error code. If error, try to reset by the "Reset Error"
@@ -159,7 +161,7 @@ The motor can be stopped by pressing the "STOP" button (or in worst case CNEN bu
 6. Press the tweek forward button (">>") to move forward or the tweak backward button ("<<")to move backward the selected distance.
 6. The motor can be stopped by pressing the "STOP" button (or in worst case CNEN button (not good for electronics) or E-Stop button).
 
-## Issue a jog command:
+### Start a jog (constant velocity) command:
 
 1. Ensure that it is safe for the motor to be powered and move. Always have the E-stop within reach.
 2. Ensure that there are no error code. If error, try to reset by the "Reset Error"
