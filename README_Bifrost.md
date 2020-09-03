@@ -38,7 +38,7 @@ The Posital encoder have not yet been included in the configuration since ESS di
 #### Prepare shell
 1. Start a new terminal window (press black button ">_" in upper left corner of screen):
 
-![New terminal](doc/gui/newterminal.png)
+![New terminal](doc/gui/newterminal_small.png)
 
 2. Go to the ecmc_avs_fat_sat repo top dir:
 ```
@@ -50,7 +50,7 @@ cd sources/ecmc_avs_fat_sat
 
 ```
 
-![Set e3 environment](doc/gui/e3env.png)
+![Set e3 environment](doc/gui/e3env_small.png)
 
 #### Start ioc for stepper axis:
 An EPICS ioc (input/output controller) needs to be started in order to control the hardware. The "fat_sat.script" file contains configurations of hardware for running a stepper axis with a Stögra motor.
@@ -69,30 +69,41 @@ All data is accessiblie in the iocsh but sometimes it's simpler with a graphical
 #### Prepare shell and start GUI
 1. Start a new terminal/shell by pressing the blach button ">_" in upper left corner of screen 
 2. Activate conda environment in order to use the correct python module versions
+
 ```
 source activate ecmccomgui_py35
 ```
+![Activate conda](doc/gui/condaenv_small.png)
 
 3. Go to GUI repo:
 ```
 cd
 cd source/ecmccomgui
 ```
+
 4. Start GUI:
 
 ```
 python ecmcGuiMain.py
 ```
+![Start GUI](doc/gui/startGUI_small.png)
+
 5. Choose process variable (PV = IOC_TEST:Axis1):
 
 ioc prefix: "IOC_TEST:"
 
 pv name: "Axis1"
 
+![Start GUI](doc/gui/mainGUI_small.png)
 
 6. Start GUI for stepper axis:
 
 press the "open gui" button
+
+The following GUI should appear:
+
+![Motor GUI](doc/gui/motorGUI_small.png)
+
 
 #### Start GUI for Encoder:
 
