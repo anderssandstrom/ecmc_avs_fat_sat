@@ -104,6 +104,16 @@ The following GUI should appear:
 
 ![Motor GUI](doc/gui/motorGUI_small.png)
 
+Item | Field | Description | R/W
+--- | --- | --- | ---|
+1 | NAME | Name of axis | R
+2 | DESC | Description of axis | R
+3 | EGU | Unit for motion axis | R
+4 | RBV | Readback value (encoder or stepcounter) with unit specified in EGU | R
+5 | VAL | Position setpoint with unit specified in EGU.  | RW
+6 | VELO | Velocity setpoint for positioning unit EGU/second | RW
+7 | VELO | Velocity setpoint for positioning unit EGU/second | RW
+
 
 #### Start GUI for Encoder:
 
