@@ -31,34 +31,6 @@ The Target and Bifrost application uses different motors and feedbacks and there
 2. [Bifrost](README_Bifrost.md)
 
 
-### PYQT GUI
-All data is accessiblie in the iocsh but sometimes it's simpler with a graphical GUI. The graphical GUI is generic and can be used to control motors and to read/write data to individual process variables (PV:s). 
-
-#### Prepare shell and start GUI
-1. Start a new terminal/shell by pressing the blach button ">_" in upper left corner of screen 
-2. Activate conda environment in order to use the correct python module versions
-```
-source activate ecmccomgui_py35
-```
-
-3. Go to GUI repo:
-```
-cd
-cd source/ecmccomgui
-```
-4. Start GUI:
-
-```
-python ecmcGuiMain.py
-```
-5. Choose process variable (PV = IOC_TEST:Axis1):
-
-ioc prefix: "IOC_TEST:"
-
-pv name: "Axis1"
-
-
-6. Start GUI for stepper axis:
-
-press the "open gui" button
-
+## PYQT GUI
+Some instruction on how to start a GUI can be found here:
+ [Bifrost](README_gui.md)
