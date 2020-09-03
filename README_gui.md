@@ -71,7 +71,7 @@ Item | Field | Description | R/W
 19 | HOMF | Initiate homing sequence (same as HOMR) | RW
 20 | STOP | Stop motion | RW
 21 | CNEN | Enable/disable amplifier | RW
-22 | RESET | Reset any error | RW
+22 | Reset Error | Reset any error | RW
 
 The different fields for the right side of the panel are explained in the below table.
 
@@ -112,15 +112,19 @@ Item | Field | Description | R/W
 #### Issue a positioning command:
 
 1. Ensure that it is safe for the motor to be powered and move. Always have the E-stop within reach.
-2. Ensure that the VELO field contains a resonable velocity.
-3. Enable the amplifier by pushing the CNEN button. The CNEN button should turn green and the status "enabled" should show "1". can take a few seconds.
-4. Enter a new target position in the "VAL" field. The motor should start rotating twoards the new target position.
+2. Ensure that there are no error code. If error, try to reset by the "Reset Error"
+3. Ensure that the VELO field contains a resonable velocity.
+4. Enable the amplifier by pushing the CNEN button. The CNEN button should turn green and the status "enabled" should show "1". can take a few seconds.
+5. Enter a new target position in the "VAL" field. The motor should start rotating twoards the new target position.
+6. The motor can be stopped by pressing the "STOP" button (or in worst case CNEN button (not good for electronics) or finaly E-Stop button).
+
 
 #### Issue a jog command:
 
 1. Ensure that it is safe for the motor to be powered and move. Always have the E-stop within reach.
-2. Ensure that the JVEL field contains a resonable velocity.
-3. Enable the amplifier by pushing the CNEN button. The CNEN button should turn green and the status "enabled" should show "1". can take a few seconds.
-4. Press the "JOGF" button for forward motion or the "JOGR" button for backward motion.
-5. The motor can be stopped by pressing the "STOP" button.
+2. Ensure that there are no error code. If error, try to reset by the "Reset Error"
+3. Ensure that the JVEL field contains a resonable velocity.
+4. Enable the amplifier by pushing the CNEN button. The CNEN button should turn green and the status "enabled" should show "1". can take a few seconds.
+5. Press the "JOGF" button for forward motion or the "JOGR" button for backward motion.
+6. The motor can be stopped by pressing the "STOP" button (or in worst case CNEN button (not good for electronics) or finaly E-Stop button).
 
