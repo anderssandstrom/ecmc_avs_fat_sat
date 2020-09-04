@@ -63,16 +63,15 @@ To exit the iocsh (if needed) type "exit" or ctrl-C keys
 exit
 ```
 
-#### Intressting PVs for use in below GUI
+## PYQT GUI
+Some instruction on how to start a GUI can be found here:
+ [GUI](https://github.com/anderssandstrom/ecmccomgui/blob/master/README_gui.md)
+ 
+### Intressting PVs for use in below GUI
 
 Item | Prefix| Pv name | Description
 --- | --- | --- | --- |
 1 | IOC_TEST: | Axis1  | Motor record for stepper
 2 | IOC_TEST: | ec0-s3-EL5002-CH1-PosAc  | SSI terminal ch1 Actual position [raw counts]
 
-
-## PYQT GUI
-Some instruction on how to start a GUI can be found here:
- [GUI](https://github.com/anderssandstrom/ecmccomgui/blob/master/README_gui.md)
- 
  
