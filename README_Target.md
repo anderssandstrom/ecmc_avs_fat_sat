@@ -61,7 +61,7 @@ exit
 ```
 ## PYQT GUI
 Some instruction on how to start a GUI can be found here:
- [GUI](README_gui.md)
+ [GUI](https://github.com/anderssandstrom/ecmccomgui/blob/master/README_gui.md)
 
 
 
