@@ -67,7 +67,7 @@ exit
 Some instruction on how to start a GUI can be found here:
  [GUI](https://github.com/anderssandstrom/ecmccomgui/blob/master/README_gui.md)
  
-### Intressting PVs for use in below GUI
+### Intressting PVs for use in GUI
 
 Item | Prefix| Pv name | Description
 --- | --- | --- | --- |
