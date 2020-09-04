@@ -35,7 +35,7 @@ The reolsvers have not yet been scaled. However, it should be enough to see that
 #### Prepare shell
 1. Start a new terminal window (press black button ">_" in upper left corner of screen):
 
-![New terminal](doc/gui/newterminal.png)
+![New terminal](doc/gui/newterminal_small.png)
 
 2. Go to the ecmc_avs_fat_sat repo top dir:
 ```
@@ -47,7 +47,7 @@ cd sources/ecmc_avs_fat_sat
 
 ```
 
-![Set e3 environment](doc/gui/e3env.png)
+![Set e3 environment](doc/gui/e3env_small.png)
 
 #### Start ioc for stepper axis:
 An EPICS ioc (input/output controller) needs to be started in order to control the hardware. The "fat_sat.script" file contains configurations of hardware for running a stepper axis with a pythron motor.
