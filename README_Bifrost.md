@@ -58,9 +58,17 @@ cd sources/ecmc_avs_fat_sat
 ![Set e3 environment](doc/gui/e3env_small.png)
 
 #### Start ioc for stepper axis:
-An EPICS ioc (input/output controller) needs to be started in order to control the hardware. The "fat_sat.script" file contains configurations of hardware for running a stepper axis with a Stögra motor.
+An EPICS ioc (input/output controller) needs to be started in order to control the hardware. The "bifrost.script" file contains configurations of hardware for running a stepper axis in open loop with a Stögra motor.
 ```
 iocsh.bash bifrost.script
+```
+
+In the above script the SSI encoder is not configured (since we had no posital encoder available at the time of shipment of the crate). After reciveing a posital encoder the "bifrost_posital.script" was generated (also open loop stepper but encoder value can be read through pv "IOC_TEST:ec0-s3-EL5002-CH1-PosAct").
+
+NOTE: The "bifrost_posital.script" is not tested on the real crate (but should work anyway).
+
+```
+iocsh.bash bifrost_posital.script
 ```
 
 To exit the iocsh (if needed) type "exit" or ctrl-C keys 
