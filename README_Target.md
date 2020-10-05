@@ -71,5 +71,9 @@ Item | Prefix| Pv name | Description
 2 | IOC_TEST: | ec0-s4-EL5021-PosAct  | SinCos encoder terminal Actual position (Amo encoder) [raw counts]
 3 | IOC_TEST: | ec0-s5-EL7201-Enc-PosAct  | Resolver  terminal Actual position [raw counts]
 
+## Verifcation of AMO encoder
 
+Instructions on how to verify AMO encoder functionality:
+
+[AMO verification](README_Target_Amo.md)
 
