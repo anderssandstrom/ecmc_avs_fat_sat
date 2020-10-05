@@ -71,6 +71,32 @@ Item | Prefix| Pv name | Description
 2 | IOC_TEST: | ec0-s4-EL5021-PosAct  | SinCos encoder terminal Actual position (Amo encoder) [raw counts]
 3 | IOC_TEST: | ec0-s5-EL7201-Enc-PosAct  | Resolver  terminal Actual position [raw counts]
 
+## Command line utilities
+
+Data is also accessible through command line tools:
+
+* camonitor <prefix><pv name>       : Continiously print new values of the selected pv when the value changes
+ 
+* caput <prefix><pv name> <value>   : Write value to the  selected pv
+ 
+* caget <prefix><pv name>           : Read value of selected pv 
+ 
+NOTE: These commands are only accesible in a prepared shell (see heading above).
+(You need to run this command . /epics/base-7.0.3.1/require/3.1.2/bin/setE3Env.bash in the terminal)
+ 
+Example: 
+```
+camonitor IOC_TEST:ec0-s4-EL5021-PosAct
+
+IOC_TEST:ec0-s4-EL5021-PosAct 2020-09-29 16:19:49.907665 750
+IOC_TEST:ec0-s4-EL5021-PosAct 2020-09-29 16:19:49.907665 751
+IOC_TEST:ec0-s4-EL5021-PosAct 2020-09-29 16:19:49.907665 752
+IOC_TEST:ec0-s4-EL5021-PosAct 2020-09-29 16:19:49.907665 753
+IOC_TEST:ec0-s4-EL5021-PosAct 2020-09-29 16:19:49.907665 754
+...
+
+```
+
 ## Verifcation of AMO encoder
 
 Instructions on how to verify AMO encoder functionality:
