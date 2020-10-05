@@ -17,7 +17,7 @@ The ecmc configuration of the el5021 in "this" crate is configured to reset the 
 It is important that the encoder reading head is mounted according to the specifications in relation to the reading head (it needs careful alignment).
 Without a proper alignment one or both of the tracks could stop working.
 
-Note: Also make sure the reading is not mounted upside down (teh two tracks on reading head must be aligned with the tracks on the scale).
+Note: Also make sure the reading is not mounted upside down (the two tracks on reading head must be aligned with the tracks on the scale).
 
 ## Verification of encoder
 In order to verify the encoder mounting, that both tracks work properlly, the encoder needs to be connected to the EL5021 terminal in the crate. The connection is prepared with a cable and M23 conenctor that fits the encoder electronics box.
@@ -30,7 +30,7 @@ Follow these steps to verify encoder:
    * Prefix  = "IOC_TEST:"
    * Pv name = "ec0-s4-EL5021-PosAct"
 5. Rotate axis
-6. If the ecnoder is mounted and connected correct the ecnoder value shold look like a saw tooth graph for each revolution (since encoder counter is reset to zero on reference track).
+6. If the ecnoder is mounted and connected correct, the encoder value shold look like a saw tooth graph for each revolution (since encoder counter is reset to zero on reference track).
 
 Example:
 
