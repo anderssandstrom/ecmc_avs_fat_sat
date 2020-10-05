@@ -21,9 +21,14 @@ Limits are feed from 24V digital output (EL2819) to 24V digital input (EL1004). 
 
 
 ### SSI encoder:
-The encofder should be connected to the EL5002 terminal.
+
+WARNING: The cable with M23 connector is prepared for the target application (AMO sin/cos encoder) and should NOT be connected to the Posital encoder. 
+
+The posital encoder should be connected to CH1 of the EL5002 terminal.
 
 [Datasheet: EL5002, SSI encoder input terminal](doc/crate/datasheets/EL5002.pdf)
+
+
 
 
 ### ecmc EPICS ioc
