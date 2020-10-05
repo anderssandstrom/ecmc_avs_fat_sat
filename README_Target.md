@@ -96,6 +96,8 @@ Item | Prefix| Pv name | Description
 2 | IOC_TEST: | ec0-s4-EL5021-PosAct  | SinCos encoder terminal Actual position (Amo encoder) [raw counts]
 3 | IOC_TEST: | ec0-s5-EL7201-Enc-PosAct  | Resolver  terminal Actual position [raw counts]
 
+All accesible PVs are listed in: [PVs](pvs.log)
+
 ## Command line utilities
 
 Data is also accessible through command line tools:
