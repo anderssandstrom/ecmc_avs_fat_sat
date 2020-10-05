@@ -139,9 +139,13 @@ Data is also accessible through command line tools:
  
 All accesible PVs are listed in: [PVs](pvs.log)
 
-NOTE: These commands are only accesible in a prepared shell (see heading above).
-(You need to run this command . /epics/base-7.0.3.1/require/3.1.2/bin/setE3Env.bash in the terminal)
- 
+NOTE: These commands are only accesible in a prepared shell (see heading above). You need to run this command in a new terminal:
+
+```
+. /epics/base-7.0.3.1/require/3.1.2/bin/setE3Env.bash
+
+```
+
 Example: Monitoring SSI encoder value
 ```
 camonitor IOC_TEST:ec0-s3-EL5002-CH1-PosAct
