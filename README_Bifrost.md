@@ -131,6 +131,8 @@ Data is also accessible through command line tools:
  
 * caget <prefix><pv name>           : Read value of selected pv 
  
+All accesible PVs are listed in: [PVs](pvs.log)
+
 NOTE: These commands are only accesible in a prepared shell (see heading above).
 (You need to run this command . /epics/base-7.0.3.1/require/3.1.2/bin/setE3Env.bash in the terminal)
  
@@ -146,3 +148,33 @@ IOC_TEST:ec0-s3-EL5002-CH1-PosAct 2020-09-29 16:19:49.911665 754
 ...
 
 ``` 
+Example: Monitoring SSI encoder value and a switch (BI1)
+```
+camonitor IOC_TEST:ec0-s3-EL5002-CH1-PosAct IOC_TEST:ec0-s1-EL1004-BI1
+
+IOC_TEST:ec0-s3-EL5002-CH1-PosAct 2020-09-29 16:19:49.907665 750
+IOC_TEST:ec0-s1-EL1004-BI1 2020-09-29 16:19:49.907665 1
+IOC_TEST:ec0-s3-EL5002-CH1-PosAct 2020-09-29 16:19:49.908665 751
+IOC_TEST:ec0-s3-EL5002-CH1-PosAct 2020-09-29 16:19:49.909665 752
+IOC_TEST:ec0-s3-EL5002-CH1-PosAct 2020-09-29 16:19:49.910665 753
+IOC_TEST:ec0-s3-EL5002-CH1-PosAct 2020-09-29 16:19:49.911665 754
+...
+
+``` 
+Example: Monitoring SSI encoder value and all 4 digital inputs switch (BI1..4)
+```
+camonitor IOC_TEST:ec0-s3-EL5002-CH1-PosAct IOC_TEST:ec0-s1-EL1004-BI1 IOC_TEST:ec0-s1-EL1004-BI2 IOC_TEST:ec0-s1-EL1004-BI3 IOC_TEST:ec0-s1-EL1004-BI4
+
+IOC_TEST:ec0-s3-EL5002-CH1-PosAct 2020-09-29 16:19:49.907665 750
+IOC_TEST:ec0-s1-EL1004-BI1 2020-09-29 16:19:49.907665 1
+IOC_TEST:ec0-s1-EL1004-BI2 2020-09-29 16:19:49.907665 1
+IOC_TEST:ec0-s1-EL1004-BI3 2020-09-29 16:19:49.907665 0
+IOC_TEST:ec0-s1-EL1004-BI4 2020-09-29 16:19:49.907665 0
+IOC_TEST:ec0-s3-EL5002-CH1-PosAct 2020-09-29 16:19:49.908665 751
+IOC_TEST:ec0-s3-EL5002-CH1-PosAct 2020-09-29 16:19:49.909665 752
+IOC_TEST:ec0-s3-EL5002-CH1-PosAct 2020-09-29 16:19:49.910665 753
+IOC_TEST:ec0-s3-EL5002-CH1-PosAct 2020-09-29 16:19:49.911665 754
+...
+
+``` 
+
