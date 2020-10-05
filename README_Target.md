@@ -123,3 +123,77 @@ IOC_TEST:ec0-s4-EL5021-PosAct 2020-09-29 16:19:49.911665 754
 ...
 
 ```
+
+Example: Monitoring resolver value and all 4 digital inputs switch (BI1..4)
+```
+camonitor IOC_TEST:ec0-s5-EL7201-Enc-PosAct IOC_TEST:ec0-s1-EL1004-BI1 IOC_TEST:ec0-s1-EL1004-BI2 IOC_TEST:ec0-s1-EL1004-BI3 IOC_TEST:ec0-s1-EL1004-BI4
+
+IOC_TEST:ec0-s5-EL7201-Enc-PosAct 2020-09-29 16:19:49.907665 750
+IOC_TEST:ec0-s1-EL1004-BI1 2020-09-29 16:19:49.907665 1
+IOC_TEST:ec0-s1-EL1004-BI2 2020-09-29 16:19:49.907665 1
+IOC_TEST:ec0-s1-EL1004-BI3 2020-09-29 16:19:49.907665 0
+IOC_TEST:ec0-s1-EL1004-BI4 2020-09-29 16:19:49.907665 0
+IOC_TEST:ec0-s5-EL7201-Enc-PosAct 2020-09-29 16:19:49.908665 751
+IOC_TEST:ec0-s5-EL7201-Enc-PosAct 2020-09-29 16:19:49.909665 752
+IOC_TEST:ec0-s5-EL7201-Enc-PosAct 2020-09-29 16:19:49.910665 753
+IOC_TEST:ec0-s5-EL7201-Enc-PosAct 2020-09-29 16:19:49.911665 754
+...
+
+``` 
+
+Example:Use the "-g10" option in order to see the complete value (if for instance a value is dispalyed in a format not suitable, could happen for encoders)..
+``` 
+//Dispaly without exponant with 10 digits.
+camonitor -g10 IOC_TEST:ec0-s5-EL7201-Enc-PosAct
+``` 
+
+Example: Get help on command: 
+``` 
+(master) $ camonitor -h
+
+Usage: camonitor [options] <PV name> ...
+
+  -h:       Help: Print this message
+  -V:       Version: Show EPICS and CA versions
+Channel Access options:
+  -w <sec>: Wait time, specifies CA timeout, default is 1.000000 second(s)
+  -m <msk>: Specify CA event mask to use.  <msk> is any combination of
+            'v' (value), 'a' (alarm), 'l' (log/archive), 'p' (property).
+            Default event mask is 'va'
+  -p <pri>: CA priority (0-99, default 0=lowest)
+Timestamps:
+  Default:  Print absolute timestamps (as reported by CA server)
+  -t <key>: Specify timestamp source(s) and type, with <key> containing
+            's' = CA server (remote) timestamps
+            'c' = CA client (local) timestamps (shown in '()'s)
+            'n' = no timestamps
+            'r' = relative timestamps (time elapsed since start of program)
+            'i' = incremental timestamps (time elapsed since last update)
+            'I' = incremental timestamps (time since last update, by channel)
+            'r', 'i' or 'I' require 's' or 'c' to select the time source
+Enum format:
+  -n:       Print DBF_ENUM values as number (default is enum string)
+Array values: Print number of elements, then list of values
+  Default:  Request and print all elements (dynamic arrays supported)
+  -# <num>: Request and print up to <num> elements
+  -S:       Print arrays of char as a string (long string)
+Floating point format:
+  Default:  Use %g format
+  -e <num>: Use %e format, with a precision of <num> digits
+  -f <num>: Use %f format, with a precision of <num> digits
+  -g <num>: Use %g format, with a precision of <num> digits
+  -s:       Get value as string (honors server-side precision)
+  -lx:      Round to long integer and print as hex number
+  -lo:      Round to long integer and print as octal number
+  -lb:      Round to long integer and print as binary number
+Integer number format:
+  Default:  Print as decimal number
+  -0x:      Print as hex number
+  -0o:      Print as octal number
+  -0b:      Print as binary number
+Alternate output field separator:
+  -F <ofs>: Use <ofs> to separate fields in output
+
+Example: camonitor -f8 my_channel another_channel
+  (doubles are printed as %f with precision of 8)
+``` 
