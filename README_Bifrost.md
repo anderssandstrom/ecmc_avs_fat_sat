@@ -12,6 +12,24 @@ Each stepper axis needs to be tested separately.
 
 Also see cabling [Cabling details](doc/bifrost/N056_AVS_cabling_proposal_V2.pdf).
 
+#### Change motor current
+The delivery state setting of the motor current is 5A. Measurement of the actual current showed that a setting of 12A approx corresponds to 10A RMS.
+
+The current can be changes by updating the ECMC_EC_DRIVE_CURRENT variable in the [bifrost.script](bifrost.script) file or [bifrost_posital.script](bifrost_posital.script). 
+
+NOTE: The current can only be changed in integer steps of Amps int the range 2A..17A.
+
+Example: Set current to 7A
+```
+# Several current settings are available for this motor (2A..17A). Motor max current is 12A RMS
+# NOTE: Setting 12A results in approx 10A RMS current (measured with current clamps and scope)
+epicsEnvSet("ECMC_EC_DRIVE_CURRENT",          "7")     # Set current in Amps here (only integers)
+
+```
+WARNING: Be sure to not set a higher current than what the motor is rated for otherwise it might overheat. 
+
+NOTE: After updating the [target.script](target.script) the EPICS ioc needs to be restarted in order to load the new setting.
+
 ### Limit switches:
 Limit (S2, S4) and Kill switches (S1, S5) are fed from 24V digital outputs (EL2819) to 24V digital inputs (EL1004) by wiring two switches cables coming from box 1 and 2.  For the FAT the actual Kill switches from box 1 need to be wired to the Limit Switches inputs to allow for the move over the full travel range between the two kill switches. The real limit switches are connected to additional inputs just for the reading of the switching position. Movements beyond the kill switches to the mechanical end stop need to be performed with bridged switches input (bridges either in the switches boxes on the detector or in the control box). Machine safety will be ensured by Emergency Stop buttons.
 Currently there are two jumpers installed in the crate that should be replaced with the actual switches by connecting the cables from the boxes:
