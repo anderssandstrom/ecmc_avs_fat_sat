@@ -17,7 +17,7 @@ Components that can be tested for bifrost:
 
 ## Connect hardware and start of EPICS IOC:
 
-NOTE: The crate should be switched off before any elctrical connections are made.
+NOTE: The crate should be switched off before any electrical connections are made.
 
 The Target and Bifrost application uses different motors and feedbacks and therefore uses different configurations of hardware and IOC.
 
