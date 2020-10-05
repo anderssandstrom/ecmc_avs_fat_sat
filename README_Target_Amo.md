@@ -28,7 +28,7 @@ Follow these steps to verify encoder:
 3. Start the PYQT graphical user interface (follow the steps in  [GUI](https://github.com/anderssandstrom/ecmccomgui/blob/master/README_gui.md)).
 4. Monitor the encoder actual position by choosing: 
    * Prefix  = "IOC_TEST:"
-   * Pv name = "ec0-s5-EL7201-Enc-PosAct"
+   * Pv name = "ec0-s4-EL5021-Enc-PosAct"
 5. Rotate axis
 6. If the ecnoder is mounted and connected correct the ecnoder value shold look like a saw tooth graph for each revolution (since encoder counter is reset to zero on reference track).
 
