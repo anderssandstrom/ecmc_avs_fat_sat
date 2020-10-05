@@ -32,6 +32,7 @@ NOTE: After updating any of the [bifrost.script](bifrost.script) or [bifrost_pos
 
 ### Limit switches:
 Limit (S2, S4) and Kill switches (S1, S5) are fed from 24V digital outputs (EL2819) to 24V digital inputs (EL1004) by wiring two switches cables coming from box 1 and 2.  For the FAT the actual Kill switches from box 1 need to be wired to the Limit Switches inputs to allow for the move over the full travel range between the two kill switches. The real limit switches are connected to additional inputs just for the reading of the switching position. Movements beyond the kill switches to the mechanical end stop need to be performed with bridged switches input (bridges either in the switches boxes on the detector or in the control box). Machine safety will be ensured by Emergency Stop buttons.
+
 Currently there are two jumpers installed in the crate that should be replaced with the actual switches by connecting the cables from the boxes:
 	1.	Connect the +24V of the cable from box 1 (Kill switches) to the output 1 of EL2819
 	2.	Connect low limit function (i.e. kill switch -, S5) to input 1 of EL1004.
@@ -49,6 +50,7 @@ Also see cabling [Cabling details](doc/bifrost/N056_AVS_cabling_proposal_V2.pdf)
 ### SSI encoder:
 
 WARNING: The cable with M23 connector is prepared for the target application (AMO sin/cos encoder) and should NOT be connected to the Posital encoder.
+
 For the POSITAL SSI encoder a dedicated cable with M23 connector needs to be connected to the Beckhoff terminals:
 	1.	Connect encoder signals to CH1 of the EL5002 terminal
 	2.	Connect +24V of the encoder to output 3 of EL2819
