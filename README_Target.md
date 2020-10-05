@@ -7,6 +7,22 @@ This file describes the work flow for commisoing of the stepper of the Target in
 
 [Datasheet: iPOS8020, stepper drive](doc/crate/datasheets/iPOS8020_P029.026.E221.DSH_.10G.pdf)
 
+#### Change motor current
+The delivery state setting of the motor current is 10A. Measurement of the actual current showed that a setting of 12A approx corresponds to 10A RMS.
+
+The current can be changes by updating the ECMC_EC_DRIVE_CURRENT variable in the  [target.script](target.script) file. 
+
+NOTE: The current can only be changed in integer steps of Amps int the range 1A..14A.
+
+Example: Set current to 5A
+```
+# Several current settings are available for this motor (2A..14A). Motor max current is 10A RMS
+# NOTE: Setting 12A results in approx 10A RMS current (measured with current clamps and scope)
+epicsEnvSet("ECMC_EC_DRIVE_CURRENT",          "5")     # Set current in Amps here (only integers)
+```
+
+NOTE: After updating the [target.script](target.script) the EPICS ioc needs to be restarted in order to load the new setting.
+
 ### Limit switches:
 Limits are feed from 24V digital output (EL2819) to 24V digital input (EL1004). There are two jumpers installed in the crate that should be replaced with the actual switches.
 1. Connect low limit between output 1 of EL2819 and input 1 of EL1004(replace jumper with switch).
