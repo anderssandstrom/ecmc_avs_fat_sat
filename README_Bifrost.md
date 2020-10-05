@@ -10,7 +10,7 @@ Each stepper axis needs to be tested separately.
 
 [Datasheet: iPOS8020, stepper drive](doc/crate/datasheets/iPOS8020_P029.026.E221.DSH_.10G.pdf)
 
-Also see cabling [Cabling details](#cabling-details) below.
+Also see cabling [Cabling details](doc/bifrost/N056_AVS_cabling_proposal_V2.pdf).
 
 ### Limit switches:
 Limit (S2, S4) and Kill switches (S1, S5) are fed from 24V digital outputs (EL2819) to 24V digital inputs (EL1004) by wiring two switches cables coming from box 1 and 2.  For the FAT the actual Kill switches from box 1 need to be wired to the Limit Switches inputs to allow for the move over the full travel range between the two kill switches. The real limit switches are connected to additional inputs just for the reading of the switching position. Movements beyond the kill switches to the mechanical end stop need to be performed with bridged switches input (bridges either in the switches boxes on the detector or in the control box). Machine safety will be ensured by Emergency Stop buttons.
@@ -26,7 +26,7 @@ Currently there are two jumpers installed in the crate that should be replaced w
 
 [Limit switches E-plan](doc/bifrost/N056_Switches_Mod_V1.pdf)
 
-Also see cabling [Cabling details](#cabling-details) below.
+Also see cabling [Cabling details](doc/bifrost/N056_AVS_cabling_proposal_V2.pdf).
  
 ### SSI encoder:
 
@@ -38,7 +38,7 @@ For the POSITAL SSI encoder a dedicated cable with M23 connector needs to be con
 
 [Datasheet: EL5002, SSI encoder input terminal](doc/crate/datasheets/EL5002.pdf)
 
-Also see cabling [Cabling details](#cabling-details) below.
+Also see cabling [Cabling details](doc/bifrost/N056_AVS_cabling_proposal_V2.pdf).
 
 ### Cabling details:
 
