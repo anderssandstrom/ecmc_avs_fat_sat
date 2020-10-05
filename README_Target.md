@@ -12,7 +12,7 @@ The delivery state setting of the motor current is 10A. Measurement of the actua
 
 The current can be changes by updating the ECMC_EC_DRIVE_CURRENT variable in the  [target.script](target.script) file. 
 
-NOTE: The current can only be changed in integer steps of Amps int the range 1A..14A.
+NOTE: The current can only be changed in integer steps of Amps in the range 2A..14A.
 
 Example: Set current to 5A
 ```
