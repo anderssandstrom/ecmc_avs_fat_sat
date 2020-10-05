@@ -15,6 +15,16 @@ Components that can be tested for bifrost:
  
 [Hardware](doc/crate/overview.jpg)
 
+## Connect hardware and start of EPICS IOC:
+
+NOTE: The crate should be switched off before any elctrical connections are made.
+
+The Target and Bifrost application uses different motors and feedbacks and therefore uses different configurations of hardware and IOC.
+
+1. [Target](README_Target.md)
+ 
+2. [Bifrost](README_Bifrost.md)
+
 ## Startup of sat_fat_box:
 1. Open Rittal box/crate
 2. Connect white HDMI cable to a HDMI screen
@@ -22,14 +32,6 @@ Components that can be tested for bifrost:
 4. Connect power cord to 3-phase power
 5. Switch breaker in lower left corner to ON
 6. The controller should now be starting up...
-
-## Connect hardware and start of EPICS IOC:
-The Target and Bifrost application uses different motors and feedbacks and therefore uses different configurations of hardware and IOC.
-
-1. [Target](README_Target.md)
- 
-2. [Bifrost](README_Bifrost.md)
-
 
 ## PYQT GUI
 Some instruction on how to start a GUI can be found here:
