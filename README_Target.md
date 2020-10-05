@@ -141,7 +141,7 @@ IOC_TEST:ec0-s5-EL7201-Enc-PosAct 2020-09-29 16:19:49.911665 754
 
 ``` 
 
-Example:Use the "-g10" option in order to see the complete value (if for instance a value is dispalyed in a format not suitable, could happen for encoders)..
+Example: Use the "-g10" option in order to see the complete value (if for instance a value is dispalyed in a format not suitable, could happen for encoders)..
 ``` 
 //Dispaly without exponant with 10 digits.
 camonitor -g10 IOC_TEST:ec0-s5-EL7201-Enc-PosAct
