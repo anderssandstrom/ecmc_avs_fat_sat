@@ -24,6 +24,14 @@ WARNING: Be sure to not set a higher current than what the motor is rated for ot
 
 NOTE: After updating the [target.script](target.script) the EPICS ioc needs to be restarted in order to load the new setting.
 
+
+### AMO encoder
+
+Instructions on how to verify AMO encoder functionality:
+
+[AMO verification](README_Target_Amo.md)
+
+
 ### Limit switches:
 Limits are feed from 24V digital output (EL2819) to 24V digital input (EL1004). There are two jumpers installed in the crate that should be replaced with the actual switches.
 1. Connect low limit between output 1 of EL2819 and input 1 of EL1004(replace jumper with switch).
@@ -113,10 +121,3 @@ IOC_TEST:ec0-s4-EL5021-PosAct 2020-09-29 16:19:49.911665 754
 ...
 
 ```
-
-## Verifcation of AMO encoder
-
-Instructions on how to verify AMO encoder functionality:
-
-[AMO verification](README_Target_Amo.md)
-
