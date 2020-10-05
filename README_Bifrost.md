@@ -119,6 +119,8 @@ Item | Prefix| Pv name | Description
 1 | IOC_TEST: | Axis1  | Motor record for stepper
 2 | IOC_TEST: | ec0-s3-EL5002-CH1-PosAct  | SSI terminal ch1 Actual position [raw counts]
 
+All accesible PVs are listed in: [PVs](pvs.log)
+
 ## Command line utilities
 
 Data is also accessible through command line tools:
