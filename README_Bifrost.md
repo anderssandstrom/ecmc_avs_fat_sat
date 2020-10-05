@@ -118,6 +118,10 @@ Item | Prefix| Pv name | Description
 --- | --- | --- | --- |
 1 | IOC_TEST: | Axis1  | Motor record for stepper
 2 | IOC_TEST: | ec0-s3-EL5002-CH1-PosAct  | SSI terminal ch1 Actual position [raw counts]
+3 | IOC_TEST: | ec0-s1-EL1004-BI1  | Digital input 1 for switches []
+4 | IOC_TEST: | ec0-s1-EL1004-BI2  | Digital input 2 for switches []
+5 | IOC_TEST: | ec0-s1-EL1004-BI3  | Digital input 3 for switches []
+6 | IOC_TEST: | ec0-s1-EL1004-BI4  | Digital input 4 for switches []
 
 All accesible PVs are listed in: [PVs](pvs.log)
 
