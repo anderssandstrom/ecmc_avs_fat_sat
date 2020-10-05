@@ -36,7 +36,7 @@ Example:
 
 ![AMO verification graph](doc/amo_encoder/amo_sawtooth.png)
 
-If the graph looks like this the encoder is mounted and connected properly, if not, then further adjustemts are needed.
+If the graph looks like this the encoder is mounted and connected properly, if not, then further adjustemts are needed (also check that electrical connection is correct).
 
 NOTE: The command line utilities can also be used to monitor the encoder value (see [Target](README_Target.md))
 
