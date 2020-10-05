@@ -28,7 +28,7 @@ epicsEnvSet("ECMC_EC_DRIVE_CURRENT",          "7")     # Set current in Amps her
 ```
 WARNING: Be sure to not set a higher current than what the motor is rated for otherwise it might overheat. 
 
-NOTE: After updating the [target.script](target.script) the EPICS ioc needs to be restarted in order to load the new setting.
+NOTE: After updating any of the [bifrost.script](bifrost.script) or [bifrost_posital.script](bifrost_posital.script) files, the EPICS ioc needs to be restarted in order to load the new settings.
 
 ### Limit switches:
 Limit (S2, S4) and Kill switches (S1, S5) are fed from 24V digital outputs (EL2819) to 24V digital inputs (EL1004) by wiring two switches cables coming from box 1 and 2.  For the FAT the actual Kill switches from box 1 need to be wired to the Limit Switches inputs to allow for the move over the full travel range between the two kill switches. The real limit switches are connected to additional inputs just for the reading of the switching position. Movements beyond the kill switches to the mechanical end stop need to be performed with bridged switches input (bridges either in the switches boxes on the detector or in the control box). Machine safety will be ensured by Emergency Stop buttons.
