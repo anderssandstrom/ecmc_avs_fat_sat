@@ -11,24 +11,32 @@ Each stepper axis needs to be tested separately.
 [Datasheet: iPOS8020, stepper drive](doc/crate/datasheets/iPOS8020_P029.026.E221.DSH_.10G.pdf)
 
 ### Limit switches:
-Limits are feed from 24V digital output (EL2819) to 24V digital input (EL1004). There are two jumpers installed in the crate that should be replaced with the actual switches.
-1. Connect low limit between output 1 of EL2819 and input 1 of EL1004(replace jumper with switch).
-2. Connect high limit between output 2 of EL2819 and input 2 of EL1004 (replace jumper with switch).
+Limit (S2, S4) and Kill switches (S1, S5) are fed from 24V digital outputs (EL2819) to 24V digital inputs (EL1004) by wiring two switches cables coming from box 1 and 2.  For the FAT the actual Kill switches from box 1 need to be wired to the Limit Switches inputs to allow for the move over the full travel range between the two kill switches. The real limit switches are connected to additional inputs just for the reading of the switching position. Movements beyond the kill switches to the mechanical end stop need to be performed with bridged switches input (bridges either in the switches boxes on the detector or in the control box). Machine safety will be ensured by Emergency Stop buttons.
+Currently there are two jumpers installed in the crate that should be replaced with the actual switches by connecting the cables from the boxes:
+	1.	Connect the +24V of the cable from box 1 (Kill switches) to the output 1 of EL2819
+	2.	Connect low limit function (i.e. kill switch -, S5) to input 1 of EL1004.
+	3.	Connect high limit function (i.e. kill switch +, S1) to input 2 of EL1004.
+	4.	Use output 2 of EL2819 and inputs 3 and 4 of EL1004 to connect the real limit switches S4 and S2 through the switches cable from box 2
 
 [Datasheet: EL2819, 24V output terminal](doc/crate/datasheets/EL2819.pdf)
 
 [Datasheet: EL1004, 24V input terminal](doc/crate/datasheets/EL1004.pdf)
 
+[Limit switches E-plan](doc/bifrost/N056_Switches_Mod_V1.pdf)
 
 ### SSI encoder:
 
-WARNING: The cable with M23 connector is prepared for the target application (AMO sin/cos encoder) and should NOT be connected to the Posital encoder. 
-
-The posital encoder should be connected to CH1 of the EL5002 terminal.
+WARNING: The cable with M23 connector is prepared for the target application (AMO sin/cos encoder) and should NOT be connected to the Posital encoder.
+For the POSITAL SSI encoder a dedicated cable with M23 connector needs to be connected to the Beckhoff terminals:
+	1.	Connect encoder signals to CH1 of the EL5002 terminal
+	2.	Connect +24V of the encoder to output 3 of EL2819
+	3.	Connect 0V and the DIR and RESET inputs to pin 3, 4 and 5 of EL9189
 
 [Datasheet: EL5002, SSI encoder input terminal](doc/crate/datasheets/EL5002.pdf)
 
+### Cabling details:
 
+[Cabling details](doc/bifrost/N056_AVS_cabling_proposal_V2.pdf)
 
 
 ### ecmc EPICS ioc
