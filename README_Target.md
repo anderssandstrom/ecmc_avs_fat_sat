@@ -20,6 +20,7 @@ Example: Set current to 5A
 # NOTE: Setting 12A results in approx 10A RMS current (measured with current clamps and scope)
 epicsEnvSet("ECMC_EC_DRIVE_CURRENT",          "5")     # Set current in Amps here (only integers)
 ```
+WARNING: Be sure to not set a higher current than what the motor is rated for otherwise it might overheat. 
 
 NOTE: After updating the [target.script](target.script) the EPICS ioc needs to be restarted in order to load the new setting.
 
