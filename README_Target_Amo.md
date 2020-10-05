@@ -25,14 +25,15 @@ In order to verify the encoder mounting, that both tracks work properlly, the en
 Follow these steps to verify encoder:
 1. Connect AMO encoder to M23 connector
 2. Start the ecmc EPICS ioc (follow the steps in [Target](README_Target.md))
-3. Start the PYQT graphical user interface (folloe the steps in  [GUI](https://github.com/anderssandstrom/ecmccomgui/blob/master/README_gui.md)).
+3. Start the PYQT graphical user interface (follow the steps in  [GUI](https://github.com/anderssandstrom/ecmccomgui/blob/master/README_gui.md)).
 4. Monitor the encoder actual position by choosing: 
    * Prefix  = "IOC_TEST:"
    * Pv name = "ec0-s5-EL7201-Enc-PosAct"
 5. Rotate axis
-6. If the ecnoder is mounted and connected correct the ecnoder value shold look like a saw tooth graph for each revolution (since counter is reset to zero on refernce track).
+6. If the ecnoder is mounted and connected correct the ecnoder value shold look like a saw tooth graph for each revolution (since encoder counter is reset to zero on reference track).
 
 Example:
+
 ![AMO verification graph](doc/amo_encoder/amo_sawtooth.png)
 
-If the graph looks like this the encoder is mounted and connected properly if not firther adjustemts are needed.
+If the graph looks like this the encoder is mounted and connected properly if not further adjustemts are needed.
