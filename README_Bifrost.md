@@ -13,7 +13,7 @@ Each stepper axis needs to be tested separately.
 Also see cabling [Cabling details](doc/bifrost/N056_AVS_cabling_proposal_V2.pdf).
 
 #### Change motor current
-The delivery state setting of the motor current is 5A. Measurement of the actual current showed that a setting of 12A approx corresponds to 10A RMS.
+The delivery state setting of the motor current is 5A. Measurement of the actual current showed that a setting of 12A approx corresponds to actual current of 10A RMS.
 
 The current can be changes by updating the ECMC_EC_DRIVE_CURRENT variable in the [bifrost.script](bifrost.script) file or [bifrost_posital.script](bifrost_posital.script). 
 
