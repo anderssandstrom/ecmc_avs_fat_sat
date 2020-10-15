@@ -190,7 +190,7 @@ IOC_TEST:ec0-s3-EL5002-CH1-PosAct 2020-09-29 16:19:49.911665 754
 
 Example: Use the "-g10" option in order to see the complete value (if for instance a value is dispalyed in a format not suitable, could happen for the SSI encoder)..
 ``` 
-#vDispaly without exponant with 10 digits.
+# Dispaly without exponant with 10 digits.
 camonitor -g10 IOC_TEST:ec0-s3-EL5002-CH1-PosAct
 
 ``` 
@@ -201,7 +201,7 @@ Example: Log data to file
 camonitor -g10 IOC_TEST:ec0-s3-EL5002-CH1-PosAct | tee data.log
 
 ``` 
-Stop logging with ctrl-C button combination.
+Note: Stop camonitor logging with "Ctrl-C" button combination.
 
 
 Example: Get help on command: 
