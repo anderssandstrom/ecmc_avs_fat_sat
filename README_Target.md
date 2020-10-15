@@ -99,6 +99,7 @@ Item | Prefix| Pv name | Description
 5 | IOC_TEST: | ec0-s1-EL1004-BI2  | Digital input 2 for switches []
 6 | IOC_TEST: | ec0-s1-EL1004-BI3  | Digital input 3 for switches []
 7 | IOC_TEST: | ec0-s1-EL1004-BI4  | Digital input 4 for switches []
+8 | IOC_TEST: | Axis1-PosAct       | Open loop step counter [deg]
 
 All accesible PVs are listed in: [PVs](pvs.log)
 
