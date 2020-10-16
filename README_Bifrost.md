@@ -122,7 +122,7 @@ iocsh.bash bifrost_posital_trigg.script
 
 The predefined position can be set by writing to the "IOC_TEST:Set-TriggPos1-RB" pv.
 
-Example: Write 1000 to trigger position by cmd line tools:
+Example: Write 1000 to trigger position by cmd line tools (see below for cmd line tool instructions):
 ```
  caput IOC_TEST:Set-TriggPos1-RB 1000
 ```
