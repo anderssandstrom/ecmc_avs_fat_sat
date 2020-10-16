@@ -126,7 +126,7 @@ Example: Write 1000 to trigger position by cmd line tools (see below for cmd lin
 ```
  caput IOC_TEST:Set-TriggPos1-RB 1000
 ```
-Note: You can also use GUI with the follwing info:
+Note: You can also use GUI with the follwing info (see below for GUI instructions):
 * prefix = "IOC_TEST:" 
 * pvname = "Set-TriggPos1-RB"
 
