@@ -1,0 +1,63 @@
+###############################################################################################
+# Trigger PLC code for avs_fat_sat
+#
+#
+#  Function: Set output trigger for 1s if passing trigger position (need to handle overflow of pos signal)
+#
+#
+# PLC_MACROS=
+#  DBG=0                         : Allow debug printouts
+#  PLC_ID=0                      : PLC index
+#  EC_TRIGG_OUT=ec.s2.BO_8       : EtherCAT trigger do output
+#  EC_POS=ec0.s3.POSITION        : EtherCAT position input
+#  ENCODER_BITS                  : Used for calc of limit for detection of encoder signal over/underflow
+# 
+
+# Init some vars
+if(plc${PLC_ID}.firstscan) {
+  println('Init PLC for triggering at positions');
+  #println('PLC_ID        = ${PLC_ID}');
+  #println('EC_TRIGG_OUT  = ${EC_TRIGG_OUT}');
+  #println('EC_POS        = ${EC_POS}');
+  #println('ENCODER_BITS  = ${ENCODER_BITS}');  
+  static.overflowlim:=(2^${ENCODER_BITS})/2;
+  println('Overflow limt  = ',static.overflowlim);
+  static.cyclesToOutput:=1/plc${PLC_ID}.scantime;  # Output 1s
+  println('cyclesToOutput = ',static.cyclesToOutput);
+  println('PLC scantime   = ',plc${PLC_ID}.scantime);
+  static.cycleCounter:=0;
+  ${EC_TRIGG_OUT}:=0;
+  static.oldPos:=${EC_POS};
+};
+
+# Over/undeflow
+if(abs(${EC_POS}-static.oldPos)>static.overflowlim) {
+  #Over or underflow. Skip this scan and go to next
+  static.oldPos:=${EC_POS};
+  println('Encoder over/underflow!');
+  return [];
+};
+
+# Moving forward
+if(${EC_POS} > static.oldPos) {
+  if(${EC_POS} >= static.triggPos1 and static.oldPos <= static.triggPos1) {
+    ${EC_TRIGG_OUT}:=1;
+    println('TRIGG POS');
+  };
+} 
+else { # Backward
+  if(${EC_POS} <= static.triggPos1 and static.oldPos >= static.triggPos1) {
+    ${EC_TRIGG_OUT}:=1;
+    println('TRIGG NEG');
+  };
+};
+
+if(${EC_TRIGG_OUT} and static.cycleCounter < static.cyclesToOutput) {
+  static.cycleCounter+=1;
+}
+else {
+  static.cycleCounter:=0;
+  ${EC_TRIGG_OUT}:=0;
+};
+
+static.oldPos:=${EC_POS};
