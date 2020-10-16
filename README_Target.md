@@ -99,6 +99,7 @@ Item | Prefix| Pv name | Description
 5 | IOC_TEST: | ec0-s1-EL1004-BI2  | Digital input 2 for switches []
 6 | IOC_TEST: | ec0-s1-EL1004-BI3  | Digital input 3 for switches []
 7 | IOC_TEST: | ec0-s1-EL1004-BI4  | Digital input 4 for switches []
+8 | IOC_TEST: | Axis1-PosAct       | Open loop step counter [deg]
 
 All accesible PVs are listed in: [PVs](pvs.log)
 
@@ -151,9 +152,16 @@ IOC_TEST:ec0-s5-EL7201-Enc-PosAct 2020-09-29 16:19:49.911665 754
 
 Example: Use the "-g10" option in order to see the complete value (if for instance a value is dispalyed in a format not suitable, could happen for encoders)..
 ``` 
-//Dispaly without exponant with 10 digits.
+# Dispaly without exponant with 10 digits.
 camonitor -g10 IOC_TEST:ec0-s5-EL7201-Enc-PosAct
 ``` 
+
+Example: Log data to file
+``` 
+# Syntax: camonitor <options> <pvname list> | tee <filename.log>
+camonitor -g10 IOC_TEST:ec0-s3-EL5002-CH1-PosAct | tee data.log
+``` 
+Note: Stop camonitor logging with "Ctrl-C" button combination.
 
 Example: Get help on command: 
 ``` 
