@@ -257,7 +257,7 @@ Example: camonitor -f8 my_channel another_channel
 ``` 
 
 ## Set output trigger at certain position
-A new startup script [bifrost_posital_trigg.script](bifrost_posital_trigg.script) have been added. This script includes the same settings as [bifrost_posital.script](bifrost_posital.script) but also includes some [PLC-code](plc/trigg.plc) for triggering. The PLC-code sets an output trigger when the motion axis passes a predefined posiiton of the Posital SSI encoder (in any diretcion).
+A new startup script [bifrost_posital_trigg.script](bifrost_posital_trigg.script) have been added. This script includes the same settings as [bifrost_posital.script](bifrost_posital.script) but also includes some [PLC-code](plc/trigg.plc) for triggering. The PLC-code sets an output trigger when the motion axis passes a predefined posiiton of the Posital SSI encoder (in any direction).
 
 NOTE: An over/underflow of the encoder signal will not result in any trigger, therefore can the predefined trigger position not be 0 or 2^30.
 
