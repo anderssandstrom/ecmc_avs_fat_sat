@@ -111,7 +111,8 @@ exit
 ```
 
 ## Start ioc for stepper, encoder and output trigger
-A new startup script [bifrost_posital_trigg.script](bifrost_posital_trigg.script) have been added. This script includes the same settings as [bifrost_posital.script](bifrost_posital.script) but also includes some [PLC-code](plc/trigg.plc) for triggering of external position measurement equipment (laser tracker). The PLC-code sets an output trigger when the motion axis passes a predefined posiiton of the Posital SSI encoder (in any direction).
+A new startup script [bifrost_posital_trigg.script](bifrost_posital_trigg.script) have been added. This script includes the same settings as [bifrost_posital.script](bifrost_posital.script) but also includes some [PLC-code](plc/trigg.plc) for triggering of external position measurement equipment (laser tracker). The PLC-code sets an output trigger (for one second) when the motion axis passes a predefined posiiton of the Posital SSI encoder (in any direction).
+The trigger output is defined as ouput 8 of the EL2819 terminal (ec0.s2.BO_8).
 
 NOTE: An over/underflow of the encoder signal will not result in any trigger, therefore can the predefined trigger position not be 0 or 2^30.
 
