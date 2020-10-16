@@ -276,4 +276,5 @@ Note: You can also use GUI with the follwing info:
 * prefix = "IOC_TEST:" 
 * pvname = "Set-TriggPos1-RB"
 
+Method:
 In order to minimize the effects of jitter due to sampling rate it's a good idea to make tests from both motion directions and average the two readings of the external position measurement equipment. This would cancel out jitter from the EtherCAT bus cycle (4ms delays).
