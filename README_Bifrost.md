@@ -255,3 +255,23 @@ Alternate output field separator:
 Example: camonitor -f8 my_channel another_channel
   (doubles are printed as %f with precision of 8)
 ``` 
+
+## Set output trigger at certain position
+A new startup script [bifrost_posital_trigg.script](bifrost_posital_trigg.script) have been added. This script includes the same settings as [bifrost_posital.script](bifrost_posital.script) but also includes some [PLC-code](plc/trigg.plc) for triggering. The PLC-code sets an output trigger when the motion axis passes a predefined posiiton of the Posital SSI encoder (in any diretcion).
+
+NOTE: An over/underflow of the encoder signal will not result in any trigger, therefore can the predefined trigger position not be 0 or 2^30.
+
+The EPICS IOC with trigger functionalities can be started by the following command:
+```
+iocsh.bash bifrost_posital_trigg.script
+```
+
+The predefined position can be set by writing to the "IOC_TEST:Set-TriggPos1-RB" pv:
+
+Example: Write 1000 to trigger position by cmd line tools:
+```
+ caput IOC_TEST:Set-TriggPos1-RB 1000
+```
+Note: You can also use GUI with the follwing info:
+* prefix = "IOC_TEST:" 
+* pvname = "Set-TriggPos1-RB"
