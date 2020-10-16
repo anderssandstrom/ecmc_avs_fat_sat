@@ -119,6 +119,7 @@ The EPICS IOC with trigger functionalities can be started by the following comma
 ```
 iocsh.bash bifrost_posital_trigg.script
 ```
+NOTE: The "bifrost_posital_trigg.script" is not tested on the real crate (but should work anyway).
 
 The predefined position can be set by writing to the "IOC_TEST:Set-TriggPos1-RB" pv.
 
