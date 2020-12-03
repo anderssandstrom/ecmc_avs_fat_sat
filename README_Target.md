@@ -213,3 +213,8 @@ Alternate output field separator:
 Example: camonitor -f8 my_channel another_channel
   (doubles are printed as %f with precision of 8)
 ``` 
+
+## Add EL3214
+Instructions on how to add an EL3214 can be found in a separate readme file:
+
+[Add EL3214](README_Target_el3214.md)
