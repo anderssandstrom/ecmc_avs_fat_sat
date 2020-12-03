@@ -1,7 +1,7 @@
 # ecmc_avs_fat_sat: Add EL3214 PT100 terminal
 This file describes the work flow for adding a EL3214 terminal to the test box.
 
-## El3214
+## EL3214
 EL3214 is a 4 channel analog input for PT100 sensors (and PT1000, and more...):
 * Sensor:  PT100 sensors (default)
 * Resolution: 0.1 degC
@@ -74,8 +74,8 @@ many records/PVs are added. The below table only show the most intressting:
 Item | Prefix| Pv name | Description
 --- | --- | --- | --- |
 1 | IOC_TEST: | ec0-s6-EL3214-AI1  | Channel 1 temperture [degC]
-2 | IOC_TEST: | ec0-s6-EL3214-AI1  | Channel 1 temperture [degC]
-3 | IOC_TEST: | ec0-s6-EL3214-AI1  | Channel 1 temperture [degC]
-4 | IOC_TEST: | ec0-s6-EL3214-AI1  | Channel 1 temperture [degC]
+2 | IOC_TEST: | ec0-s6-EL3214-AI2  | Channel 2 temperture [degC]
+3 | IOC_TEST: | ec0-s6-EL3214-AI3  | Channel 3 temperture [degC]
+4 | IOC_TEST: | ec0-s6-EL3214-AI4  | Channel 4 temperture [degC]
 
 These PV:s can be monitored with the ecmccomgui tool or classical camonitor commands (see other readmes for details). 
